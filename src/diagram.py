@@ -1,0 +1,38 @@
+"""Diagram of the saved clinical abstraction."""
+
+from pathlib import Path
+
+MERMAID = """flowchart TD
+  docs["Source documents<br/>id, role, chart time, content hash"]
+  claims["Per-document claims<br/>encounters, measures, plan text"]
+  docs --> claims
+
+  subgraph abstraction ["Saved abstraction"]
+    patient["Patient<br/>name, MRN, date of birth"]
+    plan["Treatment plan<br/>therapy-day goal, minute goal,<br/>included and excluded service types"]
+    encounter["Encounter<br/>one row per contact id"]
+    measure["Symptom measure<br/>one row per administration"]
+    scenario["Minute scenario<br/>present intervals minus nontherapeutic intervals"]
+    citation["Source citation<br/>document, line, used or held out"]
+    patient --> plan
+    patient --> encounter
+    patient --> measure
+    encounter --> scenario
+    encounter --> citation
+  end
+
+  claims --> patient
+  citation --> docs
+  scenario --> answers["Calculations in code<br/>sessions, minutes, weeks, named days, symptoms"]
+  plan --> answers
+  measure --> answers
+  answers --> narrator["Answer prose, local Ollama<br/>llama3.1:8b, temperature 0<br/>phrases the calculation and does not recompute it"]
+  answers --> kept["Calculation tables and citations<br/>kept verbatim from code"]
+  narrator --> final["Review answer"]
+  kept --> final
+"""
+
+
+def write_diagram(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("```mermaid\n" + MERMAID + "```\n", encoding="utf-8")

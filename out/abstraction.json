@@ -1,0 +1,2910 @@
+{
+  "schema_version": 1,
+  "policy": "authority",
+  "method": {
+    "identity": "One encounter id is one contact. Another note, cofacilitator, or reconnected call does not create another session.",
+    "precedence": "Explicit corrections outrank the roster they name. Signed attendance outranks a scheduled time. A retransmission, unsigned draft, or posted charge is not evidence of delivery.",
+    "therapy_minutes": "Patient-present time during individual, group, or family psychotherapy, minus overlap with intervals the record calls nontherapeutic (breaks, dropped connections, time the patient was not in the room).",
+    "patient_present_minutes": "Clock time the patient was present, including a break the patient sat through, and excluding time the record says the patient was absent.",
+    "conflict": "Eligible final documents that disagree and do not correct each other stay an unresolved range."
+  },
+  "documents": [
+    {
+      "doc_id": "BH-D101",
+      "filename": "BH-D101_group_content_2026-01-19.txt",
+      "sha256": "05a234a8adc98e72a51ba9e82c13e5975ee5026f03bb03e66575015b22562fb6",
+      "role": "group_note",
+      "chart_time": "2026-01-19T12:08",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": true,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D102",
+      "filename": "BH-D102_original_attendance_2026-01-19.txt",
+      "sha256": "514ca20809f682607e91b924c6cef0bb22f43a3d12cedbd23ea5fa362910cce5",
+      "role": "attendance_roster",
+      "chart_time": "2026-01-19T12:14",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": true,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D103",
+      "filename": "BH-D103_attendance_correction_2026-01-20.txt",
+      "sha256": "674440968b5d6d38d68b8b513cc7ac3b3516ddd97285bde1e4af69cb9f128bd9",
+      "role": "attendance_correction",
+      "chart_time": "2026-01-20T08:42",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": true,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": true,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D104",
+      "filename": "BH-D104_resent_roster_received_2026-01-26.txt",
+      "sha256": "f3f25065559f4e82b110b5c284df5c2c4f81c55c950721e7bd6a9c23a91241d5",
+      "role": "retransmission",
+      "chart_time": "2026-01-26T16:22",
+      "eligible": false,
+      "ineligible_reason": "Retransmission of an earlier roster. It records no additional visit and does not supply a new clinician observation.",
+      "flags": {
+        "retransmission": true,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": true,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D105",
+      "filename": "BH-D105_individual_2026-01-19.txt",
+      "sha256": "91fd8e8b1b3182207971dbecd77e3d2bd13e5f49608f4083e4a9245b8a2d8935",
+      "role": "individual_note",
+      "chart_time": "2026-01-19T12:32",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D106",
+      "filename": "BH-D106_telehealth_2026-01-21.txt",
+      "sha256": "09c946a2248a5a81b2c1dc85b7620babe57b72f1bd4bed3d49eba574be5ccd46",
+      "role": "individual_note",
+      "chart_time": "2026-01-21T15:04",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D107",
+      "filename": "BH-D107_group_activity_records_2026-01-22_and_29.txt",
+      "sha256": "c5953bcb242ef0143301019cf06964a4b759d432e26dc0e34f0ad1c2b819df70",
+      "role": "group_note",
+      "chart_time": "2026-01-22T12:06",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": true,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D108",
+      "filename": "BH-D108_final_attendance_and_cancellation_register.txt",
+      "sha256": "805b2c69c7fa18ab31b618b4a313c39dcdbde570cc0890de2dfd52d77ca547e1",
+      "role": "attendance_register",
+      "chart_time": "2026-01-30T17:10",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": true,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D109",
+      "filename": "BH-D109_care_coordination_2026-01-23.txt",
+      "sha256": "069ea4112779b68e7ba7bc9d06a73a6ad6dbb8110d7a1e7dfd3307769c6305be",
+      "role": "care_coordination",
+      "chart_time": "2026-01-23T10:02",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D110",
+      "filename": "BH-D110_individual_primary_record_2026-01-26.txt",
+      "sha256": "4b64c46a13b80c09ec46d1cbb7b577dbfe8027cb62366631c15efa8ec1a1f58b",
+      "role": "individual_note",
+      "chart_time": "2026-01-26T11:16",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D111",
+      "filename": "BH-D111_individual_second_record_2026-01-26.txt",
+      "sha256": "d03451942797c3fb189a5083c80950887657a79d0d1da9bb7f74bda8731d9380",
+      "role": "individual_note",
+      "chart_time": "2026-01-26T12:03",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D112",
+      "filename": "BH-D112_draft_note_and_charge_extract_2026-01-27.txt",
+      "sha256": "b4390ed6b672381f671aae23dbfa937d9c5585ca4b6db83cd811797e2a34505f",
+      "role": "draft_and_charge",
+      "chart_time": "2026-01-30T17:25",
+      "eligible": false,
+      "ineligible_reason": "Unsigned template draft and billing charge. Neither establishes that a therapy contact occurred.",
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": true,
+        "charge_only": true,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D113",
+      "filename": "BH-D113_family_therapy_2026-01-30.txt",
+      "sha256": "36764827bcb39caf2e9304c881f55e4acba9744a9792228bf36981f19a0feaf9",
+      "role": "family_note",
+      "chart_time": "2026-01-30T14:18",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D114",
+      "filename": "BH-D114_medication_management_2026-01-30.txt",
+      "sha256": "9942bd886fcd2158bbd56914551519397d70eef7103b6d33ba2fa90cc424093c",
+      "role": "medication_note",
+      "chart_time": "2026-01-30T16:02",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D115",
+      "filename": "BH-D115_symptom_measure_review_2026-01-30.txt",
+      "sha256": "4a3859fd81fc5afc5533e9add8718ce4b89492121bf68f812f73db92d319755e",
+      "role": "measurement",
+      "chart_time": "2026-01-30T16:20",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D006",
+      "filename": "early_appointment_status_export.txt",
+      "sha256": "0bf056f3769e7daf39941514e6f3e1c40c99cbc00dbb4228ee0fac07d9f75f96",
+      "role": "appointment_export",
+      "chart_time": "2026-01-16T16:50",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": true,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D005",
+      "filename": "early_group_attendance_roster.txt",
+      "sha256": "6f205f89f8d3dbd05094e647925bb3c5955f11e9fb44f255f8cdedc3edb49616",
+      "role": "attendance_roster",
+      "chart_time": "2026-01-12T15:10",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": true,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D008",
+      "filename": "family_cofacilitator_jan09.txt",
+      "sha256": "ad416fbda80683308baa15c433c7d1df7fe9221b9e8baf1f2189964bc0421aed",
+      "role": "family_note",
+      "chart_time": "2026-01-10T08:42",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D007",
+      "filename": "family_primary_jan09.txt",
+      "sha256": "924dee06b05c0a841c3f86d0c394c7af39447db6c9ea7b643cc6eb3a3c40df6b",
+      "role": "family_note",
+      "chart_time": "2026-01-09T16:24",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D001",
+      "filename": "group_authorization_letter.txt",
+      "sha256": "d2240979a2de7d7782a34a6ca26e289ee829d01eea9932e4d61b3588c724ceb1",
+      "role": "authorization",
+      "chart_time": "2026-01-04T15:26",
+      "eligible": false,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": true,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D016",
+      "filename": "group_cancellation_notice_jan15.txt",
+      "sha256": "5f3375f11c857ad3e9917ad2eefffffd5ee0412e6ab56885901c1b5d5b2115f9",
+      "role": "cancellation_notice",
+      "chart_time": "2026-01-15T08:12",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D004",
+      "filename": "group_facilitator_jan06.txt",
+      "sha256": "5edddc6b20937ecdadf834b331c399375d0889d12a8595eb4084f1da2d4f4a11",
+      "role": "group_note",
+      "chart_time": "2026-01-06T12:02",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D009",
+      "filename": "group_facilitator_jan12.txt",
+      "sha256": "d30d18d0335d5d428acea2e5ee0334fbbafc10665133a462061a01c94baa09b7",
+      "role": "group_note",
+      "chart_time": "2026-01-12T12:20",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D014",
+      "filename": "imported_measure_summary_received_jan26.txt",
+      "sha256": "85e2c780abded9efe663fd61ac6e6a7a56e5b30c9597b24f35f90076b6f7358b",
+      "role": "measurement_import",
+      "chart_time": "2026-01-16T09:10",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": true
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D011",
+      "filename": "individual_therapy_jan14.txt",
+      "sha256": "8c2fbaf5bb4545cc4590b288d768ab893a4d727f6946bcc88339669d0629eb8a",
+      "role": "individual_note",
+      "chart_time": "2026-01-14T13:16",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D002",
+      "filename": "intake_and_individual_jan05.txt",
+      "sha256": "7f5f7d4bbfc9b47a632fb33cca1b261999078d058cbd7601c63f6c6e5be3c747",
+      "role": "individual_note",
+      "chart_time": "2026-01-05T12:18",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D010",
+      "filename": "medication_review_jan13.txt",
+      "sha256": "95debafd3a72e32fd806d7aa4b420b1984f9c565d2af3c0d807269ee71aa8482",
+      "role": "medication_note",
+      "chart_time": "2026-01-13T10:04",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D015",
+      "filename": "missed_visit_outreach_jan08.txt",
+      "sha256": "4521a120a4d7a8f896d5fe9137a44f72719adc5cadbd839ef1b9d9646316b7c4",
+      "role": "outreach_log",
+      "chart_time": "2026-01-08T11:00",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": true,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D012",
+      "filename": "partner_collateral_jan16.txt",
+      "sha256": "432c973d1a4d505b49ba85c3c92dead5c2a70faca6b6dd66e87db92b95329fea",
+      "role": "collateral_note",
+      "chart_time": "2026-01-16T16:08",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D003",
+      "filename": "signed_treatment_plan_jan05.txt",
+      "sha256": "3b3f50db40b348bdd9e3baeb64b67a11d5edaf12699954762bec9633ad79ad12",
+      "role": "treatment_plan",
+      "chart_time": "2026-01-05T13:05",
+      "eligible": false,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": true,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    },
+    {
+      "doc_id": "BH-D013",
+      "filename": "symptom_measure_review_jan16.txt",
+      "sha256": "300a30dbe42be8dcfdf7ad644f23c583259611467ae32e944e8d7154c78b968e",
+      "role": "measurement",
+      "chart_time": "2026-01-16T08:17",
+      "eligible": true,
+      "ineligible_reason": null,
+      "flags": {
+        "retransmission": false,
+        "correction": false,
+        "draft": false,
+        "charge_only": false,
+        "treatment_plan": false,
+        "authorization": false,
+        "attendance": false,
+        "appointment_export": false,
+        "measurement_import": false
+      },
+      "exact_duplicate_of": null
+    }
+  ],
+  "patients": [
+    {
+      "mrn": "HG-M042",
+      "name": "Rowan Mercer",
+      "dob": "1991-04-12",
+      "plan": {
+        "doc_id": "BH-D003",
+        "line": 12,
+        "quote": "Local treatment participation goal: at least 3 therapy days and at least 150 minutes of patient-present therapy in each Monday\u2013Sunday week. A therapy day is a calendar day on which Rowan participates in individual, group, or family psychotherapy. Patient-present individual, group, and family therapy contribute to the minute goal. Medication management, contacts with collateral informants only, and care coordination do not contribute. This is the program's individualized treatment-plan goal for Rowan.",
+        "inclusion_quote": "Local treatment participation goal: at least 3 therapy days and at least 150 minutes of patient-present therapy in each Monday\u2013Sunday week. A therapy day is a calendar day on which Rowan participates in individual, group, or family psychotherapy. Patient-present individual, group, and family therapy contribute to the minute goal. Medication management, contacts with collateral informants only, and care coordination do not contribute. This is the program's individualized treatment-plan goal for Rowan.",
+        "exclusion_quote": "Local treatment participation goal: at least 3 therapy days and at least 150 minutes of patient-present therapy in each Monday\u2013Sunday week. A therapy day is a calendar day on which Rowan participates in individual, group, or family psychotherapy. Patient-present individual, group, and family therapy contribute to the minute goal. Medication management, contacts with collateral informants only, and care coordination do not contribute. This is the program's individualized treatment-plan goal for Rowan.",
+        "min_therapy_days": 3,
+        "min_therapy_minutes": 150,
+        "week": "monday_sunday",
+        "therapy_types": [
+          "individual_psychotherapy",
+          "group_psychotherapy",
+          "family_psychotherapy"
+        ],
+        "excluded_types": [
+          "medication_management",
+          "collateral",
+          "care_coordination"
+        ],
+        "requires_patient_present": true,
+        "episode_start": "2026-01-05",
+        "episode_end": "2026-01-30",
+        "patient_name": "Rowan Mercer",
+        "mrn": "HG-M042",
+        "dob": "1991-04-12",
+        "version_count": 1
+      },
+      "measures": [
+        {
+          "instrument": "PHQ-9",
+          "score": 18,
+          "item_9": null,
+          "completion_date": "2026-01-05",
+          "form_id": null,
+          "sources": [
+            {
+              "doc_id": "BH-D002",
+              "line": 15,
+              "quote": "PHQ-9 completed by Rowan on 2026-01-05: total score 18. The questionnaire is retained in the assessment tab. Clinical impressions are depressive symptoms with anxiety and behavioral avoidance. The score was reviewed alongside Rowan's account of sleep and daily functioning.",
+              "review_excerpt": "PHQ-9 completed by Rowan on 2026-01-05: total score 18. The questionnaire is retained in the assessment tab. Clinical impressions are depressive symptoms with anxiety and behavioral avoidance. The score was reviewed alongside Rowan's account of sleep and daily functioning.",
+              "duplicate_filing": false
+            }
+          ],
+          "distinct": true,
+          "duplicate_filings": []
+        },
+        {
+          "instrument": "PHQ-9",
+          "score": 14,
+          "item_9": null,
+          "completion_date": "2026-01-16",
+          "form_id": "HG-Q116",
+          "sources": [
+            {
+              "doc_id": "BH-D014",
+              "line": 13,
+              "quote": "PHQ-9   | 14     | 2026-01-16     | HG-Q116",
+              "review_excerpt": "Source review excerpt, Mara Voss, LCSW: some improvement in depressive symptoms; ongoing avoidance of work communication and inconsistent sleep. Continue current therapeutic focus and review practical functioning at the next direct appointment. Original clinician review timestamp: January 16, 2026, 09:10 local.",
+              "duplicate_filing": true
+            },
+            {
+              "doc_id": "BH-D013",
+              "line": 8,
+              "quote": "Total score: 14",
+              "review_excerpt": "Clinician review: the score and recent individual-session material suggest some improvement in depressive symptoms. Persistent avoidance, difficulty initiating work communication, and sleep disruption remain clinically relevant. Rowan has attempted small activities and communication practice but has not yet established a reliable routine. Continue the current therapeutic focus and review functioning alongside symptom change during the next direct appointment.",
+              "duplicate_filing": false
+            }
+          ],
+          "distinct": true,
+          "duplicate_filings": [
+            "BH-D014"
+          ]
+        },
+        {
+          "instrument": "PHQ-9",
+          "score": 10,
+          "item_9": 0,
+          "completion_date": "2026-01-30",
+          "form_id": null,
+          "sources": [
+            {
+              "doc_id": "BH-D115",
+              "line": 6,
+              "quote": "PHQ-9 total: 10. Item 9: 0.",
+              "review_excerpt": "Clinician review, January 30: Rowan shows partial improvement, with persistent avoidance and meaningful functional impact around returning to work. The patient has taken some initial steps, including drafting and sending a message, but continues to delay follow-up and becomes anxious when a task expands beyond a narrowly defined action. Sleep disruption remains an intermittent barrier to establishing a steadier daytime routine.",
+              "duplicate_filing": false
+            }
+          ],
+          "distinct": true,
+          "duplicate_filings": []
+        }
+      ],
+      "encounters": [
+        {
+          "encounter_id": "HG-E101",
+          "service_date": "2026-01-05",
+          "service_type": "individual_psychotherapy",
+          "service_label": "individual psychotherapy",
+          "disposition": "completed",
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": false,
+          "therapy_minutes": {
+            "low": 50,
+            "high": 50,
+            "status": "determined",
+            "calculations": [
+              "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 50,
+            "high": 50,
+            "status": "determined",
+            "calculations": [
+              "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "09:00",
+              "end": "09:50",
+              "doc_id": "BH-D006",
+              "line": 10,
+              "evidence": "HG-E101   | Jan05 | Individual therapy     | 09:00\u201309:50    | Completed"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D002"
+              ],
+              "present": [
+                {
+                  "start": "09:00",
+                  "end": "09:50",
+                  "doc_id": "BH-D002",
+                  "line": 8,
+                  "evidence": "Patient-present individual therapy: 09:00\u201309:50 local; completed, 50 minutes."
+                }
+              ],
+              "therapy_minutes": 50,
+              "present_minutes": 50,
+              "calculation": "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+            }
+          ],
+          "presence_decision": "Used authority 70 from BH-D002.",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "completed",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D002",
+              "filename": "intake_and_individual_jan05.txt",
+              "role": "individual_note",
+              "chart_time": "2026-01-05T12:18",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "09:00",
+                  "end": "09:50",
+                  "doc_id": "BH-D002",
+                  "line": 8,
+                  "evidence": "Patient-present individual therapy: 09:00\u201309:50 local; completed, 50 minutes."
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 10,
+              "text": "HG-E101   | Jan05 | Individual therapy     | 09:00\u201309:50    | Completed",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 8,
+              "text": "Patient-present individual therapy: 09:00\u201309:50 local; completed, 50 minutes.",
+              "label": "present",
+              "doc_id": "BH-D002"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E102",
+          "service_date": "2026-01-06",
+          "service_type": "group_psychotherapy",
+          "service_label": "group psychotherapy",
+          "disposition": "attended_partial",
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": true,
+          "therapy_minutes": {
+            "low": 45,
+            "high": 45,
+            "status": "determined",
+            "calculations": [
+              "present 10:15\u201311:15 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 60,
+            "high": 60,
+            "status": "determined",
+            "calculations": [
+              "present 10:15\u201311:15 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "10:00",
+              "end": "11:30",
+              "doc_id": "BH-D006",
+              "line": 11,
+              "evidence": "HG-E102   | Jan06 | Coping skills group    | 10:00\u201311:30    | Attended part"
+            }
+          ],
+          "nontherapeutic_intervals": [
+            {
+              "start": "10:45",
+              "end": "11:00",
+              "doc_id": "BH-D004",
+              "line": 12,
+              "evidence": "The whole group took a break from 10:45 to 11:00. No therapy was conducted during that interval. Following the break, the facilitator resumed with a paired planning exercise and a group discussion of barriers to practice at home."
+            }
+          ],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D005"
+              ],
+              "present": [
+                {
+                  "start": "10:15",
+                  "end": "11:15",
+                  "doc_id": "BH-D005",
+                  "line": 10,
+                  "evidence": "2026-01-06 | HG-E102   | 10:00\u201311:30    | 10:15           | 11:15            | Attended part"
+                }
+              ],
+              "therapy_minutes": 45,
+              "present_minutes": 60,
+              "calculation": "present 10:15\u201311:15 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+            }
+          ],
+          "presence_decision": "Used authority 80 from BH-D005.",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "attended_partial",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D005",
+              "filename": "early_group_attendance_roster.txt",
+              "role": "attendance_roster",
+              "chart_time": "2026-01-12T15:10",
+              "authority": 80,
+              "eligible": true,
+              "disposition": "attended_partial",
+              "present": [
+                {
+                  "start": "10:15",
+                  "end": "11:15",
+                  "doc_id": "BH-D005",
+                  "line": 10,
+                  "evidence": "2026-01-06 | HG-E102   | 10:00\u201311:30    | 10:15           | 11:15            | Attended part"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "disposition"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D004",
+              "filename": "group_facilitator_jan06.txt",
+              "role": "group_note",
+              "chart_time": "2026-01-06T12:02",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [],
+              "contributions": [
+                "nontherapeutic interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 11,
+              "text": "HG-E102   | Jan06 | Coping skills group    | 10:00\u201311:30    | Attended part",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 10,
+              "text": "2026-01-06 | HG-E102   | 10:00\u201311:30    | 10:15           | 11:15            | Attended part",
+              "label": "table_row",
+              "doc_id": "BH-D005"
+            },
+            {
+              "line": 5,
+              "text": "Service date 2026-01-06 | Group scheduled 10:00\u201311:30 local",
+              "label": "scheduled",
+              "doc_id": "BH-D004"
+            },
+            {
+              "line": 12,
+              "text": "The whole group took a break from 10:45 to 11:00. No therapy was conducted during that interval. Following the break, the facilitator resumed with a paired planning exercise and a group discussion of barriers to practice at home.",
+              "label": "nontherapeutic",
+              "doc_id": "BH-D004"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E103",
+          "service_date": "2026-01-08",
+          "service_type": "individual_psychotherapy",
+          "service_label": "individual psychotherapy",
+          "disposition": "no_show",
+          "delivered_therapy": false,
+          "exclusion_reason": "The patient did not attend.",
+          "partial": false,
+          "therapy_minutes": null,
+          "patient_present_minutes": null,
+          "scheduled_intervals": [
+            {
+              "start": "11:00",
+              "end": "11:45",
+              "doc_id": "BH-D006",
+              "line": 12,
+              "evidence": "HG-E103   | Jan08 | Individual therapy     | 11:00\u201311:45    | No show"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [],
+          "presence_decision": "no eligible presence interval",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "no_show",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D015",
+              "filename": "missed_visit_outreach_jan08.txt",
+              "role": "outreach_log",
+              "chart_time": "2026-01-08T11:00",
+              "authority": 60,
+              "eligible": true,
+              "disposition": "no_show",
+              "present": [],
+              "contributions": [
+                "disposition"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 12,
+              "text": "HG-E103   | Jan08 | Individual therapy     | 11:00\u201311:45    | No show",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 10,
+              "text": "Desk comments: HG-E103 remained unarrived at close of its appointment slot on January 8. Outreach was assigned to the individual therapist's support queue. HG-E108 was removed from the active room schedule after staff illness was reported. A cancellation message was released to all registered members. Appointment HG-E109 was retained as a partner collateral contact after Rowan could not attend.",
+              "label": "absence",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 11,
+              "text": "11:45: Appointment marked no show. Rowan was not seen for the scheduled individual visit.",
+              "label": "absence",
+              "doc_id": "BH-D015"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E104",
+          "service_date": "2026-01-09",
+          "service_type": "family_psychotherapy",
+          "service_label": "family psychotherapy",
+          "disposition": "completed",
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": false,
+          "therapy_minutes": {
+            "low": 45,
+            "high": 45,
+            "status": "determined",
+            "calculations": [
+              "present 14:00\u201314:45 = 45 min; therapy minutes = 45"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 45,
+            "high": 45,
+            "status": "determined",
+            "calculations": [
+              "present 14:00\u201314:45 = 45 min; therapy minutes = 45"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "14:00",
+              "end": "14:45",
+              "doc_id": "BH-D006",
+              "line": 13,
+              "evidence": "HG-E104   | Jan09 | Family therapy         | 14:00\u201314:45    | Completed"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D008",
+                "BH-D007"
+              ],
+              "present": [
+                {
+                  "start": "14:00",
+                  "end": "14:45",
+                  "doc_id": "BH-D008",
+                  "line": 6,
+                  "evidence": "Encounter HG-E104 | Date 2026-01-09 | 14:00\u201314:45 local"
+                }
+              ],
+              "therapy_minutes": 45,
+              "present_minutes": 45,
+              "calculation": "present 14:00\u201314:45 = 45 min; therapy minutes = 45"
+            }
+          ],
+          "presence_decision": "Used authority 70 from BH-D008, BH-D007.",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "completed",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D008",
+              "filename": "family_cofacilitator_jan09.txt",
+              "role": "family_note",
+              "chart_time": "2026-01-10T08:42",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "14:00",
+                  "end": "14:45",
+                  "doc_id": "BH-D008",
+                  "line": 6,
+                  "evidence": "Encounter HG-E104 | Date 2026-01-09 | 14:00\u201314:45 local"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D007",
+              "filename": "family_primary_jan09.txt",
+              "role": "family_note",
+              "chart_time": "2026-01-09T16:24",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "14:00",
+                  "end": "14:45",
+                  "doc_id": "BH-D007",
+                  "line": 6,
+                  "evidence": "Encounter HG-E104 | 2026-01-09, 14:00\u201314:45 local"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 13,
+              "text": "HG-E104   | Jan09 | Family therapy         | 14:00\u201314:45    | Completed",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 6,
+              "text": "Encounter HG-E104 | Date 2026-01-09 | 14:00\u201314:45 local",
+              "label": "scheduled",
+              "doc_id": "BH-D008"
+            },
+            {
+              "line": 6,
+              "text": "Encounter HG-E104 | 2026-01-09, 14:00\u201314:45 local",
+              "label": "scheduled",
+              "doc_id": "BH-D007"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E105",
+          "service_date": "2026-01-12",
+          "service_type": "group_psychotherapy",
+          "service_label": "group psychotherapy",
+          "disposition": "attended",
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": false,
+          "therapy_minutes": {
+            "low": 75,
+            "high": 75,
+            "status": "determined",
+            "calculations": [
+              "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:40\u201310:55 = 15 min; therapy minutes = 90 - 15 = 75"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 90,
+            "high": 90,
+            "status": "determined",
+            "calculations": [
+              "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:40\u201310:55 = 15 min; therapy minutes = 90 - 15 = 75"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "10:00",
+              "end": "11:30",
+              "doc_id": "BH-D006",
+              "line": 14,
+              "evidence": "HG-E105   | Jan12 | Coping skills group    | 10:00\u201311:30    | Completed"
+            }
+          ],
+          "nontherapeutic_intervals": [
+            {
+              "start": "10:40",
+              "end": "10:55",
+              "doc_id": "BH-D009",
+              "line": 12,
+              "evidence": "Group break: 10:40\u201310:55; no therapeutic activity occurred during the break. The second portion of the group included creating an activity ladder, anticipating obstacles, and rehearsing a neutral response to a missed attempt. Members were encouraged to specify the next action in concrete terms, including when and where it could take place."
+            }
+          ],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D005"
+              ],
+              "present": [
+                {
+                  "start": "10:00",
+                  "end": "11:30",
+                  "doc_id": "BH-D005",
+                  "line": 11,
+                  "evidence": "2026-01-12 | HG-E105   | 10:00\u201311:30    | 10:00           | 11:30            | Attended full"
+                }
+              ],
+              "therapy_minutes": 75,
+              "present_minutes": 90,
+              "calculation": "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:40\u201310:55 = 15 min; therapy minutes = 90 - 15 = 75"
+            }
+          ],
+          "presence_decision": "Used authority 80 from BH-D005.",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "completed",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D005",
+              "filename": "early_group_attendance_roster.txt",
+              "role": "attendance_roster",
+              "chart_time": "2026-01-12T15:10",
+              "authority": 80,
+              "eligible": true,
+              "disposition": "attended",
+              "present": [
+                {
+                  "start": "10:00",
+                  "end": "11:30",
+                  "doc_id": "BH-D005",
+                  "line": 11,
+                  "evidence": "2026-01-12 | HG-E105   | 10:00\u201311:30    | 10:00           | 11:30            | Attended full"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "disposition"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D009",
+              "filename": "group_facilitator_jan12.txt",
+              "role": "group_note",
+              "chart_time": "2026-01-12T12:20",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [],
+              "contributions": [
+                "nontherapeutic interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 14,
+              "text": "HG-E105   | Jan12 | Coping skills group    | 10:00\u201311:30    | Completed",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 11,
+              "text": "2026-01-12 | HG-E105   | 10:00\u201311:30    | 10:00           | 11:30            | Attended full",
+              "label": "table_row",
+              "doc_id": "BH-D005"
+            },
+            {
+              "line": 6,
+              "text": "Service date 2026-01-12 | Scheduled group 10:00\u201311:30 local",
+              "label": "scheduled",
+              "doc_id": "BH-D009"
+            },
+            {
+              "line": 12,
+              "text": "Group break: 10:40\u201310:55; no therapeutic activity occurred during the break. The second portion of the group included creating an activity ladder, anticipating obstacles, and rehearsing a neutral response to a missed attempt. Members were encouraged to specify the next action in concrete terms, including when and where it could take place.",
+              "label": "nontherapeutic",
+              "doc_id": "BH-D009"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E106",
+          "service_date": "2026-01-13",
+          "service_type": "medication_management",
+          "service_label": "medication management",
+          "disposition": "completed",
+          "delivered_therapy": false,
+          "exclusion_reason": "medication management is outside individual, group, and family psychotherapy.",
+          "partial": false,
+          "therapy_minutes": {
+            "low": 25,
+            "high": 25,
+            "status": "determined",
+            "calculations": [
+              "present 09:00\u201309:25 = 25 min; therapy minutes = 25"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 25,
+            "high": 25,
+            "status": "determined",
+            "calculations": [
+              "present 09:00\u201309:25 = 25 min; therapy minutes = 25"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "09:00",
+              "end": "09:25",
+              "doc_id": "BH-D006",
+              "line": 15,
+              "evidence": "HG-E106   | Jan13 | Medication management  | 09:00\u201309:25    | Completed"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D010"
+              ],
+              "present": [
+                {
+                  "start": "09:00",
+                  "end": "09:25",
+                  "doc_id": "BH-D010",
+                  "line": 7,
+                  "evidence": "Actual visit 09:00\u201309:25 local; completed, 25 minutes"
+                }
+              ],
+              "therapy_minutes": 25,
+              "present_minutes": 25,
+              "calculation": "present 09:00\u201309:25 = 25 min; therapy minutes = 25"
+            }
+          ],
+          "presence_decision": "Used authority 70 from BH-D010.",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "completed",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D010",
+              "filename": "medication_review_jan13.txt",
+              "role": "medication_note",
+              "chart_time": "2026-01-13T10:04",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "09:00",
+                  "end": "09:25",
+                  "doc_id": "BH-D010",
+                  "line": 7,
+                  "evidence": "Actual visit 09:00\u201309:25 local; completed, 25 minutes"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 15,
+              "text": "HG-E106   | Jan13 | Medication management  | 09:00\u201309:25    | Completed",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 7,
+              "text": "Actual visit 09:00\u201309:25 local; completed, 25 minutes",
+              "label": "present",
+              "doc_id": "BH-D010"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E107",
+          "service_date": "2026-01-14",
+          "service_type": "individual_psychotherapy",
+          "service_label": "individual psychotherapy",
+          "disposition": "completed",
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": false,
+          "therapy_minutes": {
+            "low": 45,
+            "high": 45,
+            "status": "determined",
+            "calculations": [
+              "present 11:00\u201311:45 = 45 min; therapy minutes = 45"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 45,
+            "high": 45,
+            "status": "determined",
+            "calculations": [
+              "present 11:00\u201311:45 = 45 min; therapy minutes = 45"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "11:00",
+              "end": "11:45",
+              "doc_id": "BH-D006",
+              "line": 16,
+              "evidence": "HG-E107   | Jan14 | Individual therapy     | 11:00\u201311:45    | Completed"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D011"
+              ],
+              "present": [
+                {
+                  "start": "11:00",
+                  "end": "11:45",
+                  "doc_id": "BH-D011",
+                  "line": 7,
+                  "evidence": "Patient-present session 11:00\u201311:45 local; completed, 45 minutes"
+                }
+              ],
+              "therapy_minutes": 45,
+              "present_minutes": 45,
+              "calculation": "present 11:00\u201311:45 = 45 min; therapy minutes = 45"
+            }
+          ],
+          "presence_decision": "Used authority 70 from BH-D011.",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "completed",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D011",
+              "filename": "individual_therapy_jan14.txt",
+              "role": "individual_note",
+              "chart_time": "2026-01-14T13:16",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "11:00",
+                  "end": "11:45",
+                  "doc_id": "BH-D011",
+                  "line": 7,
+                  "evidence": "Patient-present session 11:00\u201311:45 local; completed, 45 minutes"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 16,
+              "text": "HG-E107   | Jan14 | Individual therapy     | 11:00\u201311:45    | Completed",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 7,
+              "text": "Patient-present session 11:00\u201311:45 local; completed, 45 minutes",
+              "label": "present",
+              "doc_id": "BH-D011"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E108",
+          "service_date": "2026-01-15",
+          "service_type": "group_psychotherapy",
+          "service_label": "group psychotherapy",
+          "disposition": "cancelled_clinic",
+          "delivered_therapy": false,
+          "exclusion_reason": "The clinic cancelled the visit before it occurred.",
+          "partial": false,
+          "therapy_minutes": null,
+          "patient_present_minutes": null,
+          "scheduled_intervals": [
+            {
+              "start": "10:00",
+              "end": "11:30",
+              "doc_id": "BH-D006",
+              "line": 17,
+              "evidence": "HG-E108   | Jan15 | Coping skills group    | 10:00\u201311:30    | Clinic cancelled"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [],
+          "presence_decision": "no eligible presence interval",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "cancelled_clinic",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D016",
+              "filename": "group_cancellation_notice_jan15.txt",
+              "role": "cancellation_notice",
+              "chart_time": "2026-01-15T08:12",
+              "authority": 60,
+              "eligible": true,
+              "disposition": "cancelled_clinic",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 17,
+              "text": "HG-E108   | Jan15 | Coping skills group    | 10:00\u201311:30    | Clinic cancelled",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 9,
+              "text": "The coping skills group scheduled for January 15 from 10:00 to 11:30 is cancelled by the clinic because of staff illness. A covering facilitator is unavailable for this morning's group. The group room has been released from the schedule, and registered participants are being contacted before the planned start time.",
+              "label": "scheduled",
+              "doc_id": "BH-D016"
+            },
+            {
+              "line": 15,
+              "text": "11:35: Cancellation record closed. No group was held and no participants were seen for HG-E108. No replacement group was conducted in the January 15 slot. The telephone contact was limited to confirming the cancellation and upcoming appointment information.",
+              "label": "absence",
+              "doc_id": "BH-D016"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E109",
+          "service_date": "2026-01-16",
+          "service_type": "collateral",
+          "service_label": "collateral contact",
+          "disposition": "completed",
+          "delivered_therapy": false,
+          "exclusion_reason": "collateral contact is outside individual, group, and family psychotherapy.",
+          "partial": false,
+          "therapy_minutes": null,
+          "patient_present_minutes": null,
+          "scheduled_intervals": [
+            {
+              "start": "14:00",
+              "end": "14:40",
+              "doc_id": "BH-D006",
+              "line": 18,
+              "evidence": "HG-E109   | Jan16 | Family collateral      | 14:00\u201314:40    | Completed"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [],
+          "presence_decision": "no eligible presence interval",
+          "sources": [
+            {
+              "doc_id": "BH-D006",
+              "filename": "early_appointment_status_export.txt",
+              "role": "appointment_export",
+              "chart_time": "2026-01-16T16:50",
+              "authority": 40,
+              "eligible": true,
+              "disposition": "completed",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D012",
+              "filename": "partner_collateral_jan16.txt",
+              "role": "collateral_note",
+              "chart_time": "2026-01-16T16:08",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [],
+              "contributions": [
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 18,
+              "text": "HG-E109   | Jan16 | Family collateral      | 14:00\u201314:40    | Completed",
+              "label": "table_row",
+              "doc_id": "BH-D006"
+            },
+            {
+              "line": 6,
+              "text": "Encounter HG-E109 | Date 2026-01-16 | 14:00\u201314:40 local",
+              "label": "scheduled",
+              "doc_id": "BH-D012"
+            },
+            {
+              "line": 8,
+              "text": "Participant: Casey Mercer, partner. Rowan was absent for the entire contact.",
+              "label": "absence",
+              "doc_id": "BH-D012"
+            },
+            {
+              "line": 17,
+              "text": "Rowan did not join in person, by telephone, or by video. No patient-present psychotherapy occurred during this contact. Information from Casey will be incorporated into the next direct clinical review with Rowan. No new treatment decision was made with Rowan during this appointment.",
+              "label": "absence",
+              "doc_id": "BH-D012"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E110",
+          "service_date": "2026-01-19",
+          "service_type": "group_psychotherapy",
+          "service_label": "group psychotherapy",
+          "disposition": "attended",
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": true,
+          "therapy_minutes": {
+            "low": 60,
+            "high": 60,
+            "status": "determined",
+            "calculations": [
+              "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 75,
+            "high": 75,
+            "status": "determined",
+            "calculations": [
+              "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "10:00",
+              "end": "11:30",
+              "doc_id": "BH-D101",
+              "line": 6,
+              "evidence": "Scheduled group: 10:00\u201311:30. Nontherapeutic break: 10:45\u201311:00."
+            }
+          ],
+          "nontherapeutic_intervals": [
+            {
+              "start": "10:45",
+              "end": "11:00",
+              "doc_id": "BH-D101",
+              "line": 6,
+              "evidence": "Scheduled group: 10:00\u201311:30. Nontherapeutic break: 10:45\u201311:00."
+            }
+          ],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D103"
+              ],
+              "present": [
+                {
+                  "start": "10:00",
+                  "end": "11:15",
+                  "doc_id": "BH-D103",
+                  "line": 7,
+                  "evidence": "Correction: Patient departure for HG-E110 is 11:15, replacing the original roster value of 11:30. Patient arrival remains 10:00."
+                }
+              ],
+              "therapy_minutes": 60,
+              "present_minutes": 75,
+              "calculation": "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+            }
+          ],
+          "presence_decision": "Used authority 100 from BH-D103. Lower-authority presence claims not used for the clock time: BH-D102.",
+          "sources": [
+            {
+              "doc_id": "BH-D101",
+              "filename": "BH-D101_group_content_2026-01-19.txt",
+              "role": "group_note",
+              "chart_time": "2026-01-19T12:08",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [],
+              "contributions": [
+                "nontherapeutic interval",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D102",
+              "filename": "BH-D102_original_attendance_2026-01-19.txt",
+              "role": "attendance_roster",
+              "chart_time": "2026-01-19T12:14",
+              "authority": 80,
+              "eligible": true,
+              "disposition": "attended",
+              "present": [
+                {
+                  "start": "10:00",
+                  "end": "11:30",
+                  "doc_id": "BH-D102",
+                  "line": 9,
+                  "evidence": "Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended"
+                }
+              ],
+              "contributions": [
+                "disposition"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D103",
+              "filename": "BH-D103_attendance_correction_2026-01-20.txt",
+              "role": "attendance_correction",
+              "chart_time": "2026-01-20T08:42",
+              "authority": 100,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "10:00",
+                  "end": "11:15",
+                  "doc_id": "BH-D103",
+                  "line": 7,
+                  "evidence": "Correction: Patient departure for HG-E110 is 11:15, replacing the original roster value of 11:30. Patient arrival remains 10:00."
+                }
+              ],
+              "contributions": [
+                "patient-present interval"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D104",
+              "filename": "BH-D104_resent_roster_received_2026-01-26.txt",
+              "role": "retransmission",
+              "chart_time": "2026-01-26T16:22",
+              "authority": 0,
+              "eligible": false,
+              "disposition": "attended",
+              "present": [
+                {
+                  "start": "10:00",
+                  "end": "11:30",
+                  "doc_id": "BH-D104",
+                  "line": 14,
+                  "evidence": "Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended"
+                }
+              ],
+              "contributions": [],
+              "not_used_because": "Retransmission of an earlier roster. It records no additional visit and does not supply a new clinician observation."
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 6,
+              "text": "Scheduled group: 10:00\u201311:30. Nontherapeutic break: 10:45\u201311:00.",
+              "label": "scheduled",
+              "doc_id": "BH-D101"
+            },
+            {
+              "line": 6,
+              "text": "Scheduled group: 10:00\u201311:30. Nontherapeutic break: 10:45\u201311:00.",
+              "label": "nontherapeutic",
+              "doc_id": "BH-D101"
+            },
+            {
+              "line": 10,
+              "text": "Rowan initially followed the exercise and identified postponing a message to a supervisor as a familiar pattern. When discussion turned to returning to the workplace, Rowan became visibly tense and said the amount of discussion felt difficult to manage. The facilitator offered grounding and arranged a same-day individual meeting with the treating clinician. Patient-specific arrival and departure are maintained on the attendance roster.",
+              "label": "purpose",
+              "doc_id": "BH-D101"
+            },
+            {
+              "line": 9,
+              "text": "Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended",
+              "label": "arrival_departure",
+              "doc_id": "BH-D102"
+            },
+            {
+              "line": 14,
+              "text": "Rowan was present for the opening check-in. The patient identified anxiety about reconnecting with work and accepted an exercise handout. Staff arranged access to the individual clinician after Rowan requested additional help. No transportation assistance was requested. The patient retained the same outpatient chart identifier throughout the day's services.",
+              "label": "purpose",
+              "doc_id": "BH-D102"
+            },
+            {
+              "line": 7,
+              "text": "Correction: Patient departure for HG-E110 is 11:15, replacing the original roster value of 11:30. Patient arrival remains 10:00.",
+              "label": "correction",
+              "doc_id": "BH-D103"
+            },
+            {
+              "line": 14,
+              "text": "Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended",
+              "label": "arrival_departure",
+              "doc_id": "BH-D104"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E111",
+          "service_date": "2026-01-19",
+          "service_type": "individual_psychotherapy",
+          "service_label": "individual psychotherapy",
+          "disposition": null,
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": false,
+          "therapy_minutes": {
+            "low": 30,
+            "high": 30,
+            "status": "determined",
+            "calculations": [
+              "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 30,
+            "high": 30,
+            "status": "determined",
+            "calculations": [
+              "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+            ]
+          },
+          "scheduled_intervals": [],
+          "nontherapeutic_intervals": [],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D105"
+              ],
+              "present": [
+                {
+                  "start": "11:15",
+                  "end": "11:45",
+                  "doc_id": "BH-D105",
+                  "line": 6,
+                  "evidence": "Patient contact: 11:15\u201311:45 | Completed: 30 minutes"
+                }
+              ],
+              "therapy_minutes": 30,
+              "present_minutes": 30,
+              "calculation": "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+            }
+          ],
+          "presence_decision": "Used authority 70 from BH-D105.",
+          "sources": [
+            {
+              "doc_id": "BH-D105",
+              "filename": "BH-D105_individual_2026-01-19.txt",
+              "role": "individual_note",
+              "chart_time": "2026-01-19T12:32",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "11:15",
+                  "end": "11:45",
+                  "doc_id": "BH-D105",
+                  "line": 6,
+                  "evidence": "Patient contact: 11:15\u201311:45 | Completed: 30 minutes"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 6,
+              "text": "Patient contact: 11:15\u201311:45 | Completed: 30 minutes",
+              "label": "present",
+              "doc_id": "BH-D105"
+            },
+            {
+              "line": 9,
+              "text": "This visit was added because Rowan became anxious during group and needed individual grounding and review of coping strategies. Rowan came directly from the group room. The patient described feeling overwhelmed when other members discussed workplace demands and worried that returning to work would expose difficulties keeping up. Rowan was able to identify muscle tension, rapid breathing, and an urge to leave as early signs of activation.",
+              "label": "purpose",
+              "doc_id": "BH-D105"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E112",
+          "service_date": "2026-01-21",
+          "service_type": "individual_psychotherapy",
+          "service_label": "individual psychotherapy",
+          "disposition": null,
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": false,
+          "therapy_minutes": {
+            "low": 45,
+            "high": 45,
+            "status": "determined",
+            "calculations": [
+              "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 45,
+            "high": 45,
+            "status": "determined",
+            "calculations": [
+              "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+            ]
+          },
+          "scheduled_intervals": [],
+          "nontherapeutic_intervals": [
+            {
+              "start": "13:20",
+              "end": "13:30",
+              "doc_id": "BH-D106",
+              "line": 7,
+              "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+            }
+          ],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D106"
+              ],
+              "present": [
+                {
+                  "start": "13:00",
+                  "end": "13:20",
+                  "doc_id": "BH-D106",
+                  "line": 7,
+                  "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                },
+                {
+                  "start": "13:30",
+                  "end": "13:55",
+                  "doc_id": "BH-D106",
+                  "line": 7,
+                  "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                }
+              ],
+              "therapy_minutes": 45,
+              "present_minutes": 45,
+              "calculation": "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+            }
+          ],
+          "presence_decision": "Used authority 70 from BH-D106.",
+          "sources": [
+            {
+              "doc_id": "BH-D106",
+              "filename": "BH-D106_telehealth_2026-01-21.txt",
+              "role": "individual_note",
+              "chart_time": "2026-01-21T15:04",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "13:00",
+                  "end": "13:20",
+                  "doc_id": "BH-D106",
+                  "line": 7,
+                  "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                },
+                {
+                  "start": "13:30",
+                  "end": "13:55",
+                  "doc_id": "BH-D106",
+                  "line": 7,
+                  "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "nontherapeutic interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 7,
+              "text": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112.",
+              "label": "present",
+              "doc_id": "BH-D106"
+            },
+            {
+              "line": 7,
+              "text": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112.",
+              "label": "present",
+              "doc_id": "BH-D106"
+            },
+            {
+              "line": 7,
+              "text": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112.",
+              "label": "nontherapeutic",
+              "doc_id": "BH-D106"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E113",
+          "service_date": "2026-01-22",
+          "service_type": "group_psychotherapy",
+          "service_label": "group psychotherapy",
+          "disposition": "attended_partial",
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": true,
+          "therapy_minutes": {
+            "low": 45,
+            "high": 45,
+            "status": "determined",
+            "calculations": [
+              "present 10:30\u201311:30 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 60,
+            "high": 60,
+            "status": "determined",
+            "calculations": [
+              "present 10:30\u201311:30 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "10:00",
+              "end": "11:30",
+              "doc_id": "BH-D107",
+              "line": 8,
+              "evidence": "Scheduled group 10:00\u201311:30. Nontherapeutic break 10:45\u201311:00."
+            }
+          ],
+          "nontherapeutic_intervals": [
+            {
+              "start": "10:45",
+              "end": "11:00",
+              "doc_id": "BH-D107",
+              "line": 8,
+              "evidence": "Scheduled group 10:00\u201311:30. Nontherapeutic break 10:45\u201311:00."
+            }
+          ],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D108"
+              ],
+              "present": [
+                {
+                  "start": "10:30",
+                  "end": "11:30",
+                  "doc_id": "BH-D108",
+                  "line": 9,
+                  "evidence": "January 22 | HG-E113 | Skills group | 10:00\u201311:30 | 10:30 | 11:30 | Attended, late arrival"
+                }
+              ],
+              "therapy_minutes": 45,
+              "present_minutes": 60,
+              "calculation": "present 10:30\u201311:30 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+            }
+          ],
+          "presence_decision": "Used authority 80 from BH-D108.",
+          "sources": [
+            {
+              "doc_id": "BH-D107",
+              "filename": "BH-D107_group_activity_records_2026-01-22_and_29.txt",
+              "role": "group_note",
+              "chart_time": "2026-01-22T12:06",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [],
+              "contributions": [
+                "nontherapeutic interval",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D108",
+              "filename": "BH-D108_final_attendance_and_cancellation_register.txt",
+              "role": "attendance_register",
+              "chart_time": "2026-01-30T17:10",
+              "authority": 80,
+              "eligible": true,
+              "disposition": "attended_partial",
+              "present": [
+                {
+                  "start": "10:30",
+                  "end": "11:30",
+                  "doc_id": "BH-D108",
+                  "line": 9,
+                  "evidence": "January 22 | HG-E113 | Skills group | 10:00\u201311:30 | 10:30 | 11:30 | Attended, late arrival"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 8,
+              "text": "Scheduled group 10:00\u201311:30. Nontherapeutic break 10:45\u201311:00.",
+              "label": "scheduled",
+              "doc_id": "BH-D107"
+            },
+            {
+              "line": 8,
+              "text": "Scheduled group 10:00\u201311:30. Nontherapeutic break 10:45\u201311:00.",
+              "label": "nontherapeutic",
+              "doc_id": "BH-D107"
+            },
+            {
+              "line": 9,
+              "text": "January 22 | HG-E113 | Skills group | 10:00\u201311:30 | 10:30 | 11:30 | Attended, late arrival",
+              "label": "table_row",
+              "doc_id": "BH-D108"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E114",
+          "service_date": "2026-01-23",
+          "service_type": "care_coordination",
+          "service_label": "care coordination",
+          "disposition": null,
+          "delivered_therapy": false,
+          "exclusion_reason": "care coordination is outside individual, group, and family psychotherapy.",
+          "partial": false,
+          "therapy_minutes": null,
+          "patient_present_minutes": null,
+          "scheduled_intervals": [],
+          "nontherapeutic_intervals": [],
+          "scenarios": [],
+          "presence_decision": "no eligible presence interval",
+          "sources": [
+            {
+              "doc_id": "BH-D109",
+              "filename": "BH-D109_care_coordination_2026-01-23.txt",
+              "role": "care_coordination",
+              "chart_time": "2026-01-23T10:02",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [],
+              "contributions": [
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 7,
+              "text": "Patient participation: None. No patient contact occurred.",
+              "label": "absence",
+              "doc_id": "BH-D109"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E115",
+          "service_date": "2026-01-26",
+          "service_type": "individual_psychotherapy",
+          "service_label": "individual psychotherapy",
+          "disposition": null,
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": false,
+          "therapy_minutes": {
+            "low": 40,
+            "high": 50,
+            "status": "unresolved",
+            "calculations": [
+              "present 09:00\u201309:50 = 50 min; therapy minutes = 50",
+              "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 40,
+            "high": 50,
+            "status": "unresolved",
+            "calculations": [
+              "present 09:00\u201309:50 = 50 min; therapy minutes = 50",
+              "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+            ]
+          },
+          "scheduled_intervals": [],
+          "nontherapeutic_intervals": [],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D110"
+              ],
+              "present": [
+                {
+                  "start": "09:00",
+                  "end": "09:50",
+                  "doc_id": "BH-D110",
+                  "line": 7,
+                  "evidence": "Actual patient psychotherapy contact: 09:00\u201309:50, 50 minutes."
+                }
+              ],
+              "therapy_minutes": 50,
+              "present_minutes": 50,
+              "calculation": "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+            },
+            {
+              "doc_ids": [
+                "BH-D111"
+              ],
+              "present": [
+                {
+                  "start": "09:10",
+                  "end": "09:50",
+                  "doc_id": "BH-D111",
+                  "line": 7,
+                  "evidence": "Actual patient psychotherapy contact: 09:10\u201309:50, 40 minutes."
+                }
+              ],
+              "therapy_minutes": 40,
+              "present_minutes": 40,
+              "calculation": "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+            }
+          ],
+          "presence_decision": "Eligible documents at the same authority disagree on the contact interval (BH-D110, BH-D111). No document corrects the other, so the duration is unresolved.",
+          "sources": [
+            {
+              "doc_id": "BH-D110",
+              "filename": "BH-D110_individual_primary_record_2026-01-26.txt",
+              "role": "individual_note",
+              "chart_time": "2026-01-26T11:16",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "09:00",
+                  "end": "09:50",
+                  "doc_id": "BH-D110",
+                  "line": 7,
+                  "evidence": "Actual patient psychotherapy contact: 09:00\u201309:50, 50 minutes."
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D111",
+              "filename": "BH-D111_individual_second_record_2026-01-26.txt",
+              "role": "individual_note",
+              "chart_time": "2026-01-26T12:03",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "09:10",
+                  "end": "09:50",
+                  "doc_id": "BH-D111",
+                  "line": 7,
+                  "evidence": "Actual patient psychotherapy contact: 09:10\u201309:50, 40 minutes."
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 7,
+              "text": "Actual patient psychotherapy contact: 09:00\u201309:50, 50 minutes.",
+              "label": "present",
+              "doc_id": "BH-D110"
+            },
+            {
+              "line": 7,
+              "text": "Actual patient psychotherapy contact: 09:10\u201309:50, 40 minutes.",
+              "label": "present",
+              "doc_id": "BH-D111"
+            },
+            {
+              "line": 10,
+              "text": "I participated directly in this individual encounter. Rowan entered the treatment room at 09:10, when we began the session. The full patient-contact interval for the encounter was 09:10\u201309:50. Rowan discussed difficulty moving from a supervisor's reply to arranging the next conversation. The patient anticipated becoming overwhelmed if several work issues were raised at once. We rehearsed requesting a brief initial conversation with a specific purpose, then pausing to ask a clarifying question if needed.",
+              "label": "present",
+              "doc_id": "BH-D111"
+            }
+          ],
+          "warnings": [
+            "Eligible final notes disagree on the patient-contact interval. Neither document is a correction of the other, so both durations are retained."
+          ]
+        },
+        {
+          "encounter_id": "HG-E116",
+          "service_date": "2026-01-27",
+          "service_type": "group_psychotherapy",
+          "service_label": "group psychotherapy",
+          "disposition": "no_show",
+          "delivered_therapy": false,
+          "exclusion_reason": "The patient did not attend.",
+          "partial": false,
+          "therapy_minutes": null,
+          "patient_present_minutes": null,
+          "scheduled_intervals": [
+            {
+              "start": "10:00",
+              "end": "11:30",
+              "doc_id": "BH-D108",
+              "line": 10,
+              "evidence": "January 27 | HG-E116 | Skills group | 10:00\u201311:30 | \u2014 | \u2014 | No show; patient did not attend"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [],
+          "presence_decision": "no eligible presence interval",
+          "sources": [
+            {
+              "doc_id": "BH-D108",
+              "filename": "BH-D108_final_attendance_and_cancellation_register.txt",
+              "role": "attendance_register",
+              "chart_time": "2026-01-30T17:10",
+              "authority": 80,
+              "eligible": true,
+              "disposition": "no_show",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D112",
+              "filename": "BH-D112_draft_note_and_charge_extract_2026-01-27.txt",
+              "role": "draft_and_charge",
+              "chart_time": "2026-01-30T17:25",
+              "authority": 0,
+              "eligible": false,
+              "disposition": null,
+              "present": [],
+              "contributions": [],
+              "not_used_because": "Unsigned template draft and billing charge. Neither establishes that a therapy contact occurred."
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 10,
+              "text": "January 27 | HG-E116 | Skills group | 10:00\u201311:30 | \u2014 | \u2014 | No show; patient did not attend",
+              "label": "table_row",
+              "doc_id": "BH-D108"
+            },
+            {
+              "line": 10,
+              "text": "Scheduled service: Skills group, 10:00\u201311:30",
+              "label": "scheduled",
+              "doc_id": "BH-D112"
+            },
+            {
+              "line": 11,
+              "text": "Template attendance text: Patient attended the full session and participated in the skills discussion.",
+              "label": "rejected_claim",
+              "doc_id": "BH-D112"
+            },
+            {
+              "line": 22,
+              "text": "Quantity charged: 1 group session",
+              "label": "rejected_claim",
+              "doc_id": "BH-D112"
+            },
+            {
+              "line": 23,
+              "text": "Charge status in this export: Posted",
+              "label": "rejected_claim",
+              "doc_id": "BH-D112"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E117",
+          "service_date": "2026-01-28",
+          "service_type": "individual_psychotherapy",
+          "service_label": "individual psychotherapy",
+          "disposition": "cancelled_patient",
+          "delivered_therapy": false,
+          "exclusion_reason": "The patient cancelled before the visit.",
+          "partial": false,
+          "therapy_minutes": null,
+          "patient_present_minutes": null,
+          "scheduled_intervals": [
+            {
+              "start": "14:00",
+              "end": "14:45",
+              "doc_id": "BH-D108",
+              "line": 11,
+              "evidence": "January 28 | HG-E117 | Individual | 14:00\u201314:45 | \u2014 | \u2014 | Patient cancelled before appointment"
+            }
+          ],
+          "nontherapeutic_intervals": [],
+          "scenarios": [],
+          "presence_decision": "no eligible presence interval",
+          "sources": [
+            {
+              "doc_id": "BH-D108",
+              "filename": "BH-D108_final_attendance_and_cancellation_register.txt",
+              "role": "attendance_register",
+              "chart_time": "2026-01-30T17:10",
+              "authority": 80,
+              "eligible": true,
+              "disposition": "cancelled_patient",
+              "present": [],
+              "contributions": [
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 11,
+              "text": "January 28 | HG-E117 | Individual | 14:00\u201314:45 | \u2014 | \u2014 | Patient cancelled before appointment",
+              "label": "table_row",
+              "doc_id": "BH-D108"
+            },
+            {
+              "line": 11,
+              "text": "January 27 attendance attestation: Final roster confirms Rowan was absent for the entire group. No patient treatment contact occurred. An outreach message inviting the patient to contact scheduling was left after the group; no clinical discussion occurred. Signed: Leah Chen, LCSW, January 27, 11:54.",
+              "label": "absence",
+              "doc_id": "BH-D108"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E118",
+          "service_date": "2026-01-29",
+          "service_type": "group_psychotherapy",
+          "service_label": "group psychotherapy",
+          "disposition": "attended",
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": false,
+          "therapy_minutes": {
+            "low": 75,
+            "high": 75,
+            "status": "determined",
+            "calculations": [
+              "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 90,
+            "high": 90,
+            "status": "determined",
+            "calculations": [
+              "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+            ]
+          },
+          "scheduled_intervals": [
+            {
+              "start": "10:00",
+              "end": "11:30",
+              "doc_id": "BH-D107",
+              "line": 13,
+              "evidence": "Scheduled group 10:00\u201311:30. Nontherapeutic break 10:45\u201311:00."
+            }
+          ],
+          "nontherapeutic_intervals": [
+            {
+              "start": "10:45",
+              "end": "11:00",
+              "doc_id": "BH-D107",
+              "line": 13,
+              "evidence": "Scheduled group 10:00\u201311:30. Nontherapeutic break 10:45\u201311:00."
+            }
+          ],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D108"
+              ],
+              "present": [
+                {
+                  "start": "10:00",
+                  "end": "11:30",
+                  "doc_id": "BH-D108",
+                  "line": 12,
+                  "evidence": "January 29 | HG-E118 | Skills group | 10:00\u201311:30 | 10:00 | 11:30 | Attended"
+                }
+              ],
+              "therapy_minutes": 75,
+              "present_minutes": 90,
+              "calculation": "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+            }
+          ],
+          "presence_decision": "Used authority 80 from BH-D108.",
+          "sources": [
+            {
+              "doc_id": "BH-D107",
+              "filename": "BH-D107_group_activity_records_2026-01-22_and_29.txt",
+              "role": "group_note",
+              "chart_time": "2026-01-22T12:06",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [],
+              "contributions": [
+                "nontherapeutic interval",
+                "service type"
+              ],
+              "not_used_because": null
+            },
+            {
+              "doc_id": "BH-D108",
+              "filename": "BH-D108_final_attendance_and_cancellation_register.txt",
+              "role": "attendance_register",
+              "chart_time": "2026-01-30T17:10",
+              "authority": 80,
+              "eligible": true,
+              "disposition": "attended",
+              "present": [
+                {
+                  "start": "10:00",
+                  "end": "11:30",
+                  "doc_id": "BH-D108",
+                  "line": 12,
+                  "evidence": "January 29 | HG-E118 | Skills group | 10:00\u201311:30 | 10:00 | 11:30 | Attended"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "disposition",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 13,
+              "text": "Scheduled group 10:00\u201311:30. Nontherapeutic break 10:45\u201311:00.",
+              "label": "scheduled",
+              "doc_id": "BH-D107"
+            },
+            {
+              "line": 13,
+              "text": "Scheduled group 10:00\u201311:30. Nontherapeutic break 10:45\u201311:00.",
+              "label": "nontherapeutic",
+              "doc_id": "BH-D107"
+            },
+            {
+              "line": 12,
+              "text": "January 29 | HG-E118 | Skills group | 10:00\u201311:30 | 10:00 | 11:30 | Attended",
+              "label": "table_row",
+              "doc_id": "BH-D108"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E119",
+          "service_date": "2026-01-30",
+          "service_type": "family_psychotherapy",
+          "service_label": "family psychotherapy",
+          "disposition": null,
+          "delivered_therapy": true,
+          "exclusion_reason": null,
+          "partial": true,
+          "therapy_minutes": {
+            "low": 30,
+            "high": 30,
+            "status": "determined",
+            "calculations": [
+              "present 13:15\u201313:45 = 30 min; therapy minutes = 30"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 30,
+            "high": 30,
+            "status": "determined",
+            "calculations": [
+              "present 13:15\u201313:45 = 30 min; therapy minutes = 30"
+            ]
+          },
+          "scheduled_intervals": [],
+          "nontherapeutic_intervals": [],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D113"
+              ],
+              "present": [
+                {
+                  "start": "13:15",
+                  "end": "13:45",
+                  "doc_id": "BH-D113",
+                  "line": 7,
+                  "evidence": "Partner only: 13:00\u201313:15. Rowan present with partner: 13:15\u201313:45, 30 minutes."
+                }
+              ],
+              "therapy_minutes": 30,
+              "present_minutes": 30,
+              "calculation": "present 13:15\u201313:45 = 30 min; therapy minutes = 30"
+            }
+          ],
+          "presence_decision": "Used authority 70 from BH-D113.",
+          "sources": [
+            {
+              "doc_id": "BH-D113",
+              "filename": "BH-D113_family_therapy_2026-01-30.txt",
+              "role": "family_note",
+              "chart_time": "2026-01-30T14:18",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "13:15",
+                  "end": "13:45",
+                  "doc_id": "BH-D113",
+                  "line": 7,
+                  "evidence": "Partner only: 13:00\u201313:15. Rowan present with partner: 13:15\u201313:45, 30 minutes."
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 6,
+              "text": "Therapist session interval: 13:00\u201313:45, 45 minutes.",
+              "label": "staff",
+              "doc_id": "BH-D113"
+            },
+            {
+              "line": 7,
+              "text": "Partner only: 13:00\u201313:15. Rowan present with partner: 13:15\u201313:45, 30 minutes.",
+              "label": "staff_only",
+              "doc_id": "BH-D113"
+            },
+            {
+              "line": 7,
+              "text": "Partner only: 13:00\u201313:15. Rowan present with partner: 13:15\u201313:45, 30 minutes.",
+              "label": "present",
+              "doc_id": "BH-D113"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "encounter_id": "HG-E120",
+          "service_date": "2026-01-30",
+          "service_type": "medication_management",
+          "service_label": "medication management",
+          "disposition": null,
+          "delivered_therapy": false,
+          "exclusion_reason": "medication management is outside individual, group, and family psychotherapy.",
+          "partial": false,
+          "therapy_minutes": {
+            "low": 20,
+            "high": 20,
+            "status": "determined",
+            "calculations": [
+              "present 15:00\u201315:20 = 20 min; therapy minutes = 20"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 20,
+            "high": 20,
+            "status": "determined",
+            "calculations": [
+              "present 15:00\u201315:20 = 20 min; therapy minutes = 20"
+            ]
+          },
+          "scheduled_intervals": [],
+          "nontherapeutic_intervals": [],
+          "scenarios": [
+            {
+              "doc_ids": [
+                "BH-D114"
+              ],
+              "present": [
+                {
+                  "start": "15:00",
+                  "end": "15:20",
+                  "doc_id": "BH-D114",
+                  "line": 5,
+                  "evidence": "January 30, 2026 | 15:00\u201315:20 | Completed, 20 minutes"
+                }
+              ],
+              "therapy_minutes": 20,
+              "present_minutes": 20,
+              "calculation": "present 15:00\u201315:20 = 20 min; therapy minutes = 20"
+            }
+          ],
+          "presence_decision": "Used authority 70 from BH-D114.",
+          "sources": [
+            {
+              "doc_id": "BH-D114",
+              "filename": "BH-D114_medication_management_2026-01-30.txt",
+              "role": "medication_note",
+              "chart_time": "2026-01-30T16:02",
+              "authority": 70,
+              "eligible": true,
+              "disposition": null,
+              "present": [
+                {
+                  "start": "15:00",
+                  "end": "15:20",
+                  "doc_id": "BH-D114",
+                  "line": 5,
+                  "evidence": "January 30, 2026 | 15:00\u201315:20 | Completed, 20 minutes"
+                }
+              ],
+              "contributions": [
+                "patient-present interval",
+                "service type"
+              ],
+              "not_used_because": null
+            }
+          ],
+          "excerpts": [
+            {
+              "line": 5,
+              "text": "January 30, 2026 | 15:00\u201315:20 | Completed, 20 minutes",
+              "label": "present",
+              "doc_id": "BH-D114"
+            }
+          ],
+          "warnings": []
+        }
+      ]
+    }
+  ]
+}

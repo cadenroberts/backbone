@@ -1,0 +1,238 @@
+{
+  "id": "DEV-05",
+  "question": "Summarize the documented symptom course during the episode and the reason for the additional individual contact on January 19. Which symptom assessments are distinct, and what conclusions about progress can and cannot be supported?",
+  "seconds": 14.8714198749949,
+  "narration": {
+    "used": true,
+    "called": true,
+    "provider": "ollama",
+    "model": "llama3.1:8b",
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.9,
+      "num_ctx": 8192,
+      "num_predict": 900
+    },
+    "prose": "**Distinct Symptom Scores:**\n\n* PHQ-9 18 on January 5, 2026\n* PHQ-9 14 on January 16, 2026\n* PHQ-9 10 on January 30, 2026\n\n**Reason for Additional Individual Contact on January 19:**\n\n* Anxiety during group psychotherapy on January 19, 2026\n\n**Conclusions about Progress:**\n\n* The chart supports a decrease in PHQ-9 scores from 18 to 14 to 10.\n* Clinicians describe some improvement and partial improvement, but also ongoing avoidance, work-related anxiety, and uneven sleep.\n* The scores do not identify a cause for the score change.\n* No anxiety instrument is present in the chart.\n* The January 19 individual contact was due to anxiety during group, not a new questionnaire.",
+    "fallback": null,
+    "tokens": 1259,
+    "cost_usd": 0
+  },
+  "data": {
+    "patient": {
+      "name": "Rowan Mercer",
+      "mrn": "HG-M042",
+      "dob": "1991-04-12"
+    },
+    "measures": [
+      {
+        "instrument": "PHQ-9",
+        "score": 18,
+        "item_9": null,
+        "completion_date": "2026-01-05",
+        "form_id": null,
+        "sources": [
+          {
+            "doc_id": "BH-D002",
+            "line": 15,
+            "quote": "PHQ-9 completed by Rowan on 2026-01-05: total score 18. The questionnaire is retained in the assessment tab. Clinical impressions are depressive symptoms with anxiety and behavioral avoidance. The score was reviewed alongside Rowan's account of sleep and daily functioning.",
+            "review_excerpt": "PHQ-9 completed by Rowan on 2026-01-05: total score 18. The questionnaire is retained in the assessment tab. Clinical impressions are depressive symptoms with anxiety and behavioral avoidance. The score was reviewed alongside Rowan's account of sleep and daily functioning.",
+            "duplicate_filing": false
+          }
+        ],
+        "distinct": true,
+        "duplicate_filings": []
+      },
+      {
+        "instrument": "PHQ-9",
+        "score": 14,
+        "item_9": null,
+        "completion_date": "2026-01-16",
+        "form_id": "HG-Q116",
+        "sources": [
+          {
+            "doc_id": "BH-D014",
+            "line": 13,
+            "quote": "PHQ-9   | 14     | 2026-01-16     | HG-Q116",
+            "review_excerpt": "Source review excerpt, Mara Voss, LCSW: some improvement in depressive symptoms; ongoing avoidance of work communication and inconsistent sleep. Continue current therapeutic focus and review practical functioning at the next direct appointment. Original clinician review timestamp: January 16, 2026, 09:10 local.",
+            "duplicate_filing": true
+          },
+          {
+            "doc_id": "BH-D013",
+            "line": 8,
+            "quote": "Total score: 14",
+            "review_excerpt": "Clinician review: the score and recent individual-session material suggest some improvement in depressive symptoms. Persistent avoidance, difficulty initiating work communication, and sleep disruption remain clinically relevant. Rowan has attempted small activities and communication practice but has not yet established a reliable routine. Continue the current therapeutic focus and review functioning alongside symptom change during the next direct appointment.",
+            "duplicate_filing": false
+          }
+        ],
+        "distinct": true,
+        "duplicate_filings": [
+          "BH-D014"
+        ]
+      },
+      {
+        "instrument": "PHQ-9",
+        "score": 10,
+        "item_9": 0,
+        "completion_date": "2026-01-30",
+        "form_id": null,
+        "sources": [
+          {
+            "doc_id": "BH-D115",
+            "line": 6,
+            "quote": "PHQ-9 total: 10. Item 9: 0.",
+            "review_excerpt": "Clinician review, January 30: Rowan shows partial improvement, with persistent avoidance and meaningful functional impact around returning to work. The patient has taken some initial steps, including drafting and sending a message, but continues to delay follow-up and becomes anxious when a task expands beyond a narrowly defined action. Sleep disruption remains an intermittent barrier to establishing a steadier daytime routine.",
+            "duplicate_filing": false
+          }
+        ],
+        "distinct": true,
+        "duplicate_filings": []
+      }
+    ],
+    "distinct_measures": [
+      {
+        "instrument": "PHQ-9",
+        "score": 18,
+        "item_9": null,
+        "completion_date": "2026-01-05",
+        "form_id": null,
+        "sources": [
+          {
+            "doc_id": "BH-D002",
+            "line": 15,
+            "quote": "PHQ-9 completed by Rowan on 2026-01-05: total score 18. The questionnaire is retained in the assessment tab. Clinical impressions are depressive symptoms with anxiety and behavioral avoidance. The score was reviewed alongside Rowan's account of sleep and daily functioning.",
+            "review_excerpt": "PHQ-9 completed by Rowan on 2026-01-05: total score 18. The questionnaire is retained in the assessment tab. Clinical impressions are depressive symptoms with anxiety and behavioral avoidance. The score was reviewed alongside Rowan's account of sleep and daily functioning.",
+            "duplicate_filing": false
+          }
+        ],
+        "distinct": true,
+        "duplicate_filings": []
+      },
+      {
+        "instrument": "PHQ-9",
+        "score": 14,
+        "item_9": null,
+        "completion_date": "2026-01-16",
+        "form_id": "HG-Q116",
+        "sources": [
+          {
+            "doc_id": "BH-D014",
+            "line": 13,
+            "quote": "PHQ-9   | 14     | 2026-01-16     | HG-Q116",
+            "review_excerpt": "Source review excerpt, Mara Voss, LCSW: some improvement in depressive symptoms; ongoing avoidance of work communication and inconsistent sleep. Continue current therapeutic focus and review practical functioning at the next direct appointment. Original clinician review timestamp: January 16, 2026, 09:10 local.",
+            "duplicate_filing": true
+          },
+          {
+            "doc_id": "BH-D013",
+            "line": 8,
+            "quote": "Total score: 14",
+            "review_excerpt": "Clinician review: the score and recent individual-session material suggest some improvement in depressive symptoms. Persistent avoidance, difficulty initiating work communication, and sleep disruption remain clinically relevant. Rowan has attempted small activities and communication practice but has not yet established a reliable routine. Continue the current therapeutic focus and review functioning alongside symptom change during the next direct appointment.",
+            "duplicate_filing": false
+          }
+        ],
+        "distinct": true,
+        "duplicate_filings": [
+          "BH-D014"
+        ]
+      },
+      {
+        "instrument": "PHQ-9",
+        "score": 10,
+        "item_9": 0,
+        "completion_date": "2026-01-30",
+        "form_id": null,
+        "sources": [
+          {
+            "doc_id": "BH-D115",
+            "line": 6,
+            "quote": "PHQ-9 total: 10. Item 9: 0.",
+            "review_excerpt": "Clinician review, January 30: Rowan shows partial improvement, with persistent avoidance and meaningful functional impact around returning to work. The patient has taken some initial steps, including drafting and sending a message, but continues to delay follow-up and becomes anxious when a task expands beyond a narrowly defined action. Sleep disruption remains an intermittent barrier to establishing a steadier daytime routine.",
+            "duplicate_filing": false
+          }
+        ],
+        "distinct": true,
+        "duplicate_filings": []
+      }
+    ],
+    "distinct_count": 3,
+    "scores_decrease": true,
+    "focus": [
+      {
+        "encounter": {
+          "encounter_id": "HG-E110",
+          "service_date": "2026-01-19",
+          "service_type": "group_psychotherapy",
+          "service_label": "group psychotherapy",
+          "disposition": "attended",
+          "partial": true,
+          "delivered_therapy": true,
+          "therapy_minutes": {
+            "low": 60,
+            "high": 60,
+            "status": "determined",
+            "calculations": [
+              "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 75,
+            "high": 75,
+            "status": "determined",
+            "calculations": [
+              "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+            ]
+          }
+        },
+        "purpose": [
+          {
+            "line": 10,
+            "text": "Rowan initially followed the exercise and identified postponing a message to a supervisor as a familiar pattern. When discussion turned to returning to the workplace, Rowan became visibly tense and said the amount of discussion felt difficult to manage. The facilitator offered grounding and arranged a same-day individual meeting with the treating clinician. Patient-specific arrival and departure are maintained on the attendance roster.",
+            "label": "purpose",
+            "doc_id": "BH-D101"
+          },
+          {
+            "line": 14,
+            "text": "Rowan was present for the opening check-in. The patient identified anxiety about reconnecting with work and accepted an exercise handout. Staff arranged access to the individual clinician after Rowan requested additional help. No transportation assistance was requested. The patient retained the same outpatient chart identifier throughout the day's services.",
+            "label": "purpose",
+            "doc_id": "BH-D102"
+          }
+        ]
+      },
+      {
+        "encounter": {
+          "encounter_id": "HG-E111",
+          "service_date": "2026-01-19",
+          "service_type": "individual_psychotherapy",
+          "service_label": "individual psychotherapy",
+          "disposition": null,
+          "partial": false,
+          "delivered_therapy": true,
+          "therapy_minutes": {
+            "low": 30,
+            "high": 30,
+            "status": "determined",
+            "calculations": [
+              "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+            ]
+          },
+          "patient_present_minutes": {
+            "low": 30,
+            "high": 30,
+            "status": "determined",
+            "calculations": [
+              "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+            ]
+          }
+        },
+        "purpose": [
+          {
+            "line": 9,
+            "text": "This visit was added because Rowan became anxious during group and needed individual grounding and review of coping strategies. Rowan came directly from the group room. The patient described feeling overwhelmed when other members discussed workplace demands and worried that returning to work would expose difficulties keeping up. Rowan was able to identify muscle tension, rapid breathing, and an urge to leave as early signs of activation.",
+            "label": "purpose",
+            "doc_id": "BH-D105"
+          }
+        ]
+      }
+    ]
+  }
+}

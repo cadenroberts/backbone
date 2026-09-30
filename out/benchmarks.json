@@ -1,0 +1,77 @@
+{
+  "measured": {
+    "documents": 31,
+    "unique_documents": 31,
+    "exact_duplicate_files": 0,
+    "cache_hits": 31,
+    "extract_seconds": 0.0068,
+    "reconcile_seconds": 0.0003,
+    "policy_comparison_seconds": 0.0007,
+    "abstraction_bytes": 107801,
+    "individual_question_seconds": [
+      {
+        "id": "DEV-01",
+        "seconds": 20.259299917001044,
+        "narrated": true,
+        "fallback": null
+      },
+      {
+        "id": "DEV-02",
+        "seconds": 16.90894891700009,
+        "narrated": true,
+        "fallback": null
+      },
+      {
+        "id": "DEV-03",
+        "seconds": 12.768114166989108,
+        "narrated": true,
+        "fallback": null
+      },
+      {
+        "id": "DEV-04",
+        "seconds": 11.669932500008144,
+        "narrated": true,
+        "fallback": null
+      },
+      {
+        "id": "DEV-05",
+        "seconds": 14.8714198749949,
+        "narrated": true,
+        "fallback": null
+      }
+    ],
+    "individual_questions_total_seconds": 76.47891479200916,
+    "collection_question_seconds": 7.466600800398737e-05,
+    "rebuilt_abstraction_for_answers": false,
+    "model_calls": 5,
+    "model_fallback_count": 0,
+    "model_tokens": 6277,
+    "model_cost_usd": 0,
+    "answer_model": {
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "settings": {
+        "temperature": 0,
+        "top_p": 0.9,
+        "num_ctx": 8192,
+        "num_predict": 900
+      }
+    },
+    "extraction_model": "none \u2014 deterministic parser, no API calls"
+  },
+  "estimates": {
+    "basis": "linear in document count from the measured extract time and abstraction size; not a benchmark at that scale",
+    "seconds_per_document_measured": 0.0002179099674028675,
+    "extract_seconds_at_500k": 108.95498370143375,
+    "extract_seconds_at_1m": 217.9099674028675,
+    "abstraction_bytes_at_500k_if_similar_density": 1738725806,
+    "abstraction_bytes_at_1m_if_similar_density": 3477451612
+  },
+  "notes": [
+    "extract_seconds is the measured time to read and extract the supplied files on this run.",
+    "cache_hits equal to the file count means this run reloaded saved extractions instead of reparsing.",
+    "500k and 1M figures are linear extrapolations of extract_seconds and abstraction size. They are estimates, not measurements at that scale.",
+    "Answer times read only abstraction.json. The abstraction was not rebuilt for those questions.",
+    "collection_question_seconds is a question across patients (consecutive weeks below the plan)."
+  ]
+}

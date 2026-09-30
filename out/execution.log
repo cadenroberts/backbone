@@ -1,0 +1,14 @@
+files=31 unique=31 cache_hits=31
+extract_seconds=0.0068 reconcile_seconds=0.0003
+policy_comparison_seconds=0.0007
+abstraction_bytes=107801
+collection_question_seconds=0.000075
+answer_model={'provider': 'ollama', 'model': 'llama3.1:8b', 'settings': {'temperature': 0, 'top_p': 0.9, 'num_ctx': 8192, 'num_predict': 900}}
+model_calls=5 model_cost_usd=0
+answers_rebuilt_abstraction=false
+answer DEV-01 seconds=20.259300
+answer DEV-02 seconds=16.908949
+answer DEV-03 seconds=12.768114
+answer DEV-04 seconds=11.669933
+answer DEV-05 seconds=14.871420
+answer_total_seconds=76.478915

@@ -1,0 +1,457 @@
+{
+  "id": "DEV-04",
+  "question": "Reconstruct the care on January 19 and January 21. How many therapy contacts and patient therapy minutes occurred on each date, and how do the attendance records, clinical notes, later documents, and telehealth records affect your answer?",
+  "seconds": 11.669932500008144,
+  "narration": {
+    "used": true,
+    "called": true,
+    "provider": "ollama",
+    "model": "llama3.1:8b",
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.9,
+      "num_ctx": 8192,
+      "num_predict": 900
+    },
+    "prose": "**January 19, 2026**\n\n* 2 therapy contacts\n* 90 minutes of therapy\n* Attendance records: HG-E110 (60 minutes) and HG-E111 (30 minutes)\n* Clinical notes: BH-D101, BH-D102, BH-D103, BH-D104, BH-D105\n* Later documents: BH-D103 (correction of patient departure time)\n* Telehealth records: None\n\n**January 21, 2026**\n\n* 1 therapy contact\n* 45 minutes of therapy\n* Attendance records: HG-E112\n* Clinical notes: BH-D106\n* Later documents: BH-D106 (connection lost and reconnection)\n* Telehealth records: BH-D106 (connection lost and reconnection)",
+    "fallback": null,
+    "tokens": 892,
+    "cost_usd": 0
+  },
+  "data": {
+    "patient": {
+      "name": "Rowan Mercer",
+      "mrn": "HG-M042",
+      "dob": "1991-04-12"
+    },
+    "days": [
+      {
+        "date": "2026-01-19",
+        "therapy_contacts": 2,
+        "contact_minutes": {
+          "low": 90,
+          "high": 90,
+          "status": "determined"
+        },
+        "present_minutes": {
+          "low": 105,
+          "high": 105,
+          "status": "determined"
+        },
+        "encounters": [
+          {
+            "encounter_id": "HG-E110",
+            "service_date": "2026-01-19",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended",
+            "delivered_therapy": true,
+            "exclusion_reason": null,
+            "partial": true,
+            "therapy_minutes": {
+              "low": 60,
+              "high": 60,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 75,
+              "high": 75,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+              ]
+            },
+            "scheduled_intervals": [
+              {
+                "start": "10:00",
+                "end": "11:30",
+                "doc_id": "BH-D101",
+                "line": 6,
+                "evidence": "Scheduled group: 10:00\u201311:30. Nontherapeutic break: 10:45\u201311:00."
+              }
+            ],
+            "nontherapeutic_intervals": [
+              {
+                "start": "10:45",
+                "end": "11:00",
+                "doc_id": "BH-D101",
+                "line": 6,
+                "evidence": "Scheduled group: 10:00\u201311:30. Nontherapeutic break: 10:45\u201311:00."
+              }
+            ],
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D103"
+                ],
+                "present": [
+                  {
+                    "start": "10:00",
+                    "end": "11:15",
+                    "doc_id": "BH-D103",
+                    "line": 7,
+                    "evidence": "Correction: Patient departure for HG-E110 is 11:15, replacing the original roster value of 11:30. Patient arrival remains 10:00."
+                  }
+                ],
+                "therapy_minutes": 60,
+                "present_minutes": 75,
+                "calculation": "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+              }
+            ],
+            "presence_decision": "Used authority 100 from BH-D103. Lower-authority presence claims not used for the clock time: BH-D102.",
+            "sources": [
+              {
+                "doc_id": "BH-D101",
+                "filename": "BH-D101_group_content_2026-01-19.txt",
+                "role": "group_note",
+                "chart_time": "2026-01-19T12:08",
+                "authority": 70,
+                "eligible": true,
+                "disposition": null,
+                "present": [],
+                "contributions": [
+                  "nontherapeutic interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D102",
+                "filename": "BH-D102_original_attendance_2026-01-19.txt",
+                "role": "attendance_roster",
+                "chart_time": "2026-01-19T12:14",
+                "authority": 80,
+                "eligible": true,
+                "disposition": "attended",
+                "present": [
+                  {
+                    "start": "10:00",
+                    "end": "11:30",
+                    "doc_id": "BH-D102",
+                    "line": 9,
+                    "evidence": "Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended"
+                  }
+                ],
+                "contributions": [
+                  "disposition"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D103",
+                "filename": "BH-D103_attendance_correction_2026-01-20.txt",
+                "role": "attendance_correction",
+                "chart_time": "2026-01-20T08:42",
+                "authority": 100,
+                "eligible": true,
+                "disposition": null,
+                "present": [
+                  {
+                    "start": "10:00",
+                    "end": "11:15",
+                    "doc_id": "BH-D103",
+                    "line": 7,
+                    "evidence": "Correction: Patient departure for HG-E110 is 11:15, replacing the original roster value of 11:30. Patient arrival remains 10:00."
+                  }
+                ],
+                "contributions": [
+                  "patient-present interval"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D104",
+                "filename": "BH-D104_resent_roster_received_2026-01-26.txt",
+                "role": "retransmission",
+                "chart_time": "2026-01-26T16:22",
+                "authority": 0,
+                "eligible": false,
+                "disposition": "attended",
+                "present": [
+                  {
+                    "start": "10:00",
+                    "end": "11:30",
+                    "doc_id": "BH-D104",
+                    "line": 14,
+                    "evidence": "Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended"
+                  }
+                ],
+                "contributions": [],
+                "not_used_because": "Retransmission of an earlier roster. It records no additional visit and does not supply a new clinician observation."
+              }
+            ],
+            "excerpts": [
+              {
+                "line": 6,
+                "text": "Scheduled group: 10:00\u201311:30. Nontherapeutic break: 10:45\u201311:00.",
+                "label": "scheduled",
+                "doc_id": "BH-D101"
+              },
+              {
+                "line": 6,
+                "text": "Scheduled group: 10:00\u201311:30. Nontherapeutic break: 10:45\u201311:00.",
+                "label": "nontherapeutic",
+                "doc_id": "BH-D101"
+              },
+              {
+                "line": 10,
+                "text": "Rowan initially followed the exercise and identified postponing a message to a supervisor as a familiar pattern. When discussion turned to returning to the workplace, Rowan became visibly tense and said the amount of discussion felt difficult to manage. The facilitator offered grounding and arranged a same-day individual meeting with the treating clinician. Patient-specific arrival and departure are maintained on the attendance roster.",
+                "label": "purpose",
+                "doc_id": "BH-D101"
+              },
+              {
+                "line": 9,
+                "text": "Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended",
+                "label": "arrival_departure",
+                "doc_id": "BH-D102"
+              },
+              {
+                "line": 14,
+                "text": "Rowan was present for the opening check-in. The patient identified anxiety about reconnecting with work and accepted an exercise handout. Staff arranged access to the individual clinician after Rowan requested additional help. No transportation assistance was requested. The patient retained the same outpatient chart identifier throughout the day's services.",
+                "label": "purpose",
+                "doc_id": "BH-D102"
+              },
+              {
+                "line": 7,
+                "text": "Correction: Patient departure for HG-E110 is 11:15, replacing the original roster value of 11:30. Patient arrival remains 10:00.",
+                "label": "correction",
+                "doc_id": "BH-D103"
+              },
+              {
+                "line": 14,
+                "text": "Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended",
+                "label": "arrival_departure",
+                "doc_id": "BH-D104"
+              }
+            ],
+            "warnings": []
+          },
+          {
+            "encounter_id": "HG-E111",
+            "service_date": "2026-01-19",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": null,
+            "delivered_therapy": true,
+            "exclusion_reason": null,
+            "partial": false,
+            "therapy_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+              ]
+            },
+            "scheduled_intervals": [],
+            "nontherapeutic_intervals": [],
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D105"
+                ],
+                "present": [
+                  {
+                    "start": "11:15",
+                    "end": "11:45",
+                    "doc_id": "BH-D105",
+                    "line": 6,
+                    "evidence": "Patient contact: 11:15\u201311:45 | Completed: 30 minutes"
+                  }
+                ],
+                "therapy_minutes": 30,
+                "present_minutes": 30,
+                "calculation": "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+              }
+            ],
+            "presence_decision": "Used authority 70 from BH-D105.",
+            "sources": [
+              {
+                "doc_id": "BH-D105",
+                "filename": "BH-D105_individual_2026-01-19.txt",
+                "role": "individual_note",
+                "chart_time": "2026-01-19T12:32",
+                "authority": 70,
+                "eligible": true,
+                "disposition": null,
+                "present": [
+                  {
+                    "start": "11:15",
+                    "end": "11:45",
+                    "doc_id": "BH-D105",
+                    "line": 6,
+                    "evidence": "Patient contact: 11:15\u201311:45 | Completed: 30 minutes"
+                  }
+                ],
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ],
+            "excerpts": [
+              {
+                "line": 6,
+                "text": "Patient contact: 11:15\u201311:45 | Completed: 30 minutes",
+                "label": "present",
+                "doc_id": "BH-D105"
+              },
+              {
+                "line": 9,
+                "text": "This visit was added because Rowan became anxious during group and needed individual grounding and review of coping strategies. Rowan came directly from the group room. The patient described feeling overwhelmed when other members discussed workplace demands and worried that returning to work would expose difficulties keeping up. Rowan was able to identify muscle tension, rapid breathing, and an urge to leave as early signs of activation.",
+                "label": "purpose",
+                "doc_id": "BH-D105"
+              }
+            ],
+            "warnings": []
+          }
+        ]
+      },
+      {
+        "date": "2026-01-21",
+        "therapy_contacts": 1,
+        "contact_minutes": {
+          "low": 45,
+          "high": 45,
+          "status": "determined"
+        },
+        "present_minutes": {
+          "low": 45,
+          "high": 45,
+          "status": "determined"
+        },
+        "encounters": [
+          {
+            "encounter_id": "HG-E112",
+            "service_date": "2026-01-21",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": null,
+            "delivered_therapy": true,
+            "exclusion_reason": null,
+            "partial": false,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "scheduled_intervals": [],
+            "nontherapeutic_intervals": [
+              {
+                "start": "13:20",
+                "end": "13:30",
+                "doc_id": "BH-D106",
+                "line": 7,
+                "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+              }
+            ],
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D106"
+                ],
+                "present": [
+                  {
+                    "start": "13:00",
+                    "end": "13:20",
+                    "doc_id": "BH-D106",
+                    "line": 7,
+                    "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                  },
+                  {
+                    "start": "13:30",
+                    "end": "13:55",
+                    "doc_id": "BH-D106",
+                    "line": 7,
+                    "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                  }
+                ],
+                "therapy_minutes": 45,
+                "present_minutes": 45,
+                "calculation": "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+              }
+            ],
+            "presence_decision": "Used authority 70 from BH-D106.",
+            "sources": [
+              {
+                "doc_id": "BH-D106",
+                "filename": "BH-D106_telehealth_2026-01-21.txt",
+                "role": "individual_note",
+                "chart_time": "2026-01-21T15:04",
+                "authority": 70,
+                "eligible": true,
+                "disposition": null,
+                "present": [
+                  {
+                    "start": "13:00",
+                    "end": "13:20",
+                    "doc_id": "BH-D106",
+                    "line": 7,
+                    "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                  },
+                  {
+                    "start": "13:30",
+                    "end": "13:55",
+                    "doc_id": "BH-D106",
+                    "line": 7,
+                    "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                  }
+                ],
+                "contributions": [
+                  "patient-present interval",
+                  "nontherapeutic interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ],
+            "excerpts": [
+              {
+                "line": 7,
+                "text": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112.",
+                "label": "present",
+                "doc_id": "BH-D106"
+              },
+              {
+                "line": 7,
+                "text": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112.",
+                "label": "present",
+                "doc_id": "BH-D106"
+              },
+              {
+                "line": 7,
+                "text": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112.",
+                "label": "nontherapeutic",
+                "doc_id": "BH-D106"
+              }
+            ],
+            "warnings": []
+          }
+        ]
+      }
+    ]
+  }
+}

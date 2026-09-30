@@ -1,0 +1,993 @@
+{
+  "id": "DEV-03",
+  "question": "For each week, did the delivered therapy meet the goal documented in Rowan\u2019s treatment plan? State the goal, the relevant therapy-day and minute totals, and whether it was met, not met, or cannot be determined from the current record.",
+  "seconds": 12.768114166989108,
+  "narration": {
+    "used": true,
+    "called": true,
+    "provider": "ollama",
+    "model": "llama3.1:8b",
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.9,
+      "num_ctx": 8192,
+      "num_predict": 900
+    },
+    "prose": "| Week | Goal | Therapy days | Received minutes | Present minutes incl. breaks | Conclusion |\n| --- | --- | --- | --- | --- | --- |\n| January 5, 2026 | at least 3 days, 150 minutes | 3 | 140 | 155 | cannot be determined |\n| January 12, 2026 | at least 3 days, 150 minutes | 2 | 120 | 135 | not met |\n| January 19, 2026 | at least 3 days, 150 minutes | 3 | 180 | 210 | met |\n| January 26, 2026 | at least 3 days, 150 minutes | 3 | 145-155 | 160-170 | cannot be determined |",
+    "fallback": null,
+    "tokens": 1051,
+    "cost_usd": 0
+  },
+  "data": {
+    "patient": {
+      "name": "Rowan Mercer",
+      "mrn": "HG-M042",
+      "dob": "1991-04-12"
+    },
+    "start": "2026-01-05",
+    "end": "2026-01-30",
+    "plan": {
+      "min_therapy_days": 3,
+      "min_therapy_minutes": 150,
+      "week": "monday_sunday",
+      "quote": "Local treatment participation goal: at least 3 therapy days and at least 150 minutes of patient-present therapy in each Monday\u2013Sunday week. A therapy day is a calendar day on which Rowan participates in individual, group, or family psychotherapy. Patient-present individual, group, and family therapy contribute to the minute goal. Medication management, contacts with collateral informants only, and care coordination do not contribute. This is the program's individualized treatment-plan goal for Rowan.",
+      "inclusion_quote": "Local treatment participation goal: at least 3 therapy days and at least 150 minutes of patient-present therapy in each Monday\u2013Sunday week. A therapy day is a calendar day on which Rowan participates in individual, group, or family psychotherapy. Patient-present individual, group, and family therapy contribute to the minute goal. Medication management, contacts with collateral informants only, and care coordination do not contribute. This is the program's individualized treatment-plan goal for Rowan.",
+      "exclusion_quote": "Local treatment participation goal: at least 3 therapy days and at least 150 minutes of patient-present therapy in each Monday\u2013Sunday week. A therapy day is a calendar day on which Rowan participates in individual, group, or family psychotherapy. Patient-present individual, group, and family therapy contribute to the minute goal. Medication management, contacts with collateral informants only, and care coordination do not contribute. This is the program's individualized treatment-plan goal for Rowan.",
+      "doc_id": "BH-D003",
+      "line": 12,
+      "excluded_types": [
+        "medication_management",
+        "collateral",
+        "care_coordination"
+      ],
+      "episode_start": "2026-01-05",
+      "episode_end": "2026-01-30"
+    },
+    "weeks": [
+      {
+        "monday": "2026-01-05",
+        "sunday": "2026-01-11",
+        "inside_window_end": "2026-01-11",
+        "therapy_days": [
+          "2026-01-05",
+          "2026-01-06",
+          "2026-01-09"
+        ],
+        "contact_minutes": {
+          "low": 140,
+          "high": 140,
+          "status": "determined"
+        },
+        "present_minutes": {
+          "low": 155,
+          "high": 155,
+          "status": "determined"
+        },
+        "encounters": [
+          {
+            "encounter_id": "HG-E101",
+            "service_date": "2026-01-05",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": "completed",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 50,
+              "high": 50,
+              "status": "determined",
+              "calculations": [
+                "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 50,
+              "high": 50,
+              "status": "determined",
+              "calculations": [
+                "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D002"
+                ],
+                "present": [
+                  {
+                    "start": "09:00",
+                    "end": "09:50",
+                    "doc_id": "BH-D002",
+                    "line": 8,
+                    "evidence": "Patient-present individual therapy: 09:00\u201309:50 local; completed, 50 minutes."
+                  }
+                ],
+                "therapy_minutes": 50,
+                "present_minutes": 50,
+                "calculation": "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D006",
+                "role": "appointment_export",
+                "contributions": [
+                  "disposition",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D002",
+                "role": "individual_note",
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          },
+          {
+            "encounter_id": "HG-E102",
+            "service_date": "2026-01-06",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended_partial",
+            "partial": true,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 10:15\u201311:15 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 60,
+              "high": 60,
+              "status": "determined",
+              "calculations": [
+                "present 10:15\u201311:15 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D005"
+                ],
+                "present": [
+                  {
+                    "start": "10:15",
+                    "end": "11:15",
+                    "doc_id": "BH-D005",
+                    "line": 10,
+                    "evidence": "2026-01-06 | HG-E102   | 10:00\u201311:30    | 10:15           | 11:15            | Attended part"
+                  }
+                ],
+                "therapy_minutes": 45,
+                "present_minutes": 60,
+                "calculation": "present 10:15\u201311:15 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D006",
+                "role": "appointment_export",
+                "contributions": [
+                  "disposition",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D005",
+                "role": "attendance_roster",
+                "contributions": [
+                  "patient-present interval",
+                  "disposition"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D004",
+                "role": "group_note",
+                "contributions": [
+                  "nontherapeutic interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          },
+          {
+            "encounter_id": "HG-E104",
+            "service_date": "2026-01-09",
+            "service_type": "family_psychotherapy",
+            "service_label": "family psychotherapy",
+            "disposition": "completed",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 14:00\u201314:45 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 14:00\u201314:45 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D008",
+                  "BH-D007"
+                ],
+                "present": [
+                  {
+                    "start": "14:00",
+                    "end": "14:45",
+                    "doc_id": "BH-D008",
+                    "line": 6,
+                    "evidence": "Encounter HG-E104 | Date 2026-01-09 | 14:00\u201314:45 local"
+                  }
+                ],
+                "therapy_minutes": 45,
+                "present_minutes": 45,
+                "calculation": "present 14:00\u201314:45 = 45 min; therapy minutes = 45"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D006",
+                "role": "appointment_export",
+                "contributions": [
+                  "disposition",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D008",
+                "role": "family_note",
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D007",
+                "role": "family_note",
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          }
+        ],
+        "day_count": 3,
+        "day_goal_met": true,
+        "contact_status": "not_met",
+        "present_status": "met",
+        "conclusion": "cannot_be_determined",
+        "reason": "The two readings of 'therapy minutes' disagree. Excluding documented nontherapeutic intervals: not_met. Counting all patient-present clock time, including breaks the patient sat through: met.",
+        "needed_days": 3,
+        "needed_minutes": 150
+      },
+      {
+        "monday": "2026-01-12",
+        "sunday": "2026-01-18",
+        "inside_window_end": "2026-01-18",
+        "therapy_days": [
+          "2026-01-12",
+          "2026-01-14"
+        ],
+        "contact_minutes": {
+          "low": 120,
+          "high": 120,
+          "status": "determined"
+        },
+        "present_minutes": {
+          "low": 135,
+          "high": 135,
+          "status": "determined"
+        },
+        "encounters": [
+          {
+            "encounter_id": "HG-E105",
+            "service_date": "2026-01-12",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 75,
+              "high": 75,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:40\u201310:55 = 15 min; therapy minutes = 90 - 15 = 75"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 90,
+              "high": 90,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:40\u201310:55 = 15 min; therapy minutes = 90 - 15 = 75"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D005"
+                ],
+                "present": [
+                  {
+                    "start": "10:00",
+                    "end": "11:30",
+                    "doc_id": "BH-D005",
+                    "line": 11,
+                    "evidence": "2026-01-12 | HG-E105   | 10:00\u201311:30    | 10:00           | 11:30            | Attended full"
+                  }
+                ],
+                "therapy_minutes": 75,
+                "present_minutes": 90,
+                "calculation": "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:40\u201310:55 = 15 min; therapy minutes = 90 - 15 = 75"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D006",
+                "role": "appointment_export",
+                "contributions": [
+                  "disposition",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D005",
+                "role": "attendance_roster",
+                "contributions": [
+                  "patient-present interval",
+                  "disposition"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D009",
+                "role": "group_note",
+                "contributions": [
+                  "nontherapeutic interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          },
+          {
+            "encounter_id": "HG-E107",
+            "service_date": "2026-01-14",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": "completed",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 11:00\u201311:45 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 11:00\u201311:45 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D011"
+                ],
+                "present": [
+                  {
+                    "start": "11:00",
+                    "end": "11:45",
+                    "doc_id": "BH-D011",
+                    "line": 7,
+                    "evidence": "Patient-present session 11:00\u201311:45 local; completed, 45 minutes"
+                  }
+                ],
+                "therapy_minutes": 45,
+                "present_minutes": 45,
+                "calculation": "present 11:00\u201311:45 = 45 min; therapy minutes = 45"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D006",
+                "role": "appointment_export",
+                "contributions": [
+                  "disposition",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D011",
+                "role": "individual_note",
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          }
+        ],
+        "day_count": 2,
+        "day_goal_met": false,
+        "contact_status": "not_met",
+        "present_status": "not_met",
+        "conclusion": "not_met",
+        "reason": null,
+        "needed_days": 3,
+        "needed_minutes": 150
+      },
+      {
+        "monday": "2026-01-19",
+        "sunday": "2026-01-25",
+        "inside_window_end": "2026-01-25",
+        "therapy_days": [
+          "2026-01-19",
+          "2026-01-21",
+          "2026-01-22"
+        ],
+        "contact_minutes": {
+          "low": 180,
+          "high": 180,
+          "status": "determined"
+        },
+        "present_minutes": {
+          "low": 210,
+          "high": 210,
+          "status": "determined"
+        },
+        "encounters": [
+          {
+            "encounter_id": "HG-E110",
+            "service_date": "2026-01-19",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended",
+            "partial": true,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 60,
+              "high": 60,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 75,
+              "high": 75,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D103"
+                ],
+                "present": [
+                  {
+                    "start": "10:00",
+                    "end": "11:15",
+                    "doc_id": "BH-D103",
+                    "line": 7,
+                    "evidence": "Correction: Patient departure for HG-E110 is 11:15, replacing the original roster value of 11:30. Patient arrival remains 10:00."
+                  }
+                ],
+                "therapy_minutes": 60,
+                "present_minutes": 75,
+                "calculation": "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D101",
+                "role": "group_note",
+                "contributions": [
+                  "nontherapeutic interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D102",
+                "role": "attendance_roster",
+                "contributions": [
+                  "disposition"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D103",
+                "role": "attendance_correction",
+                "contributions": [
+                  "patient-present interval"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D104",
+                "role": "retransmission",
+                "contributions": [],
+                "not_used_because": "Retransmission of an earlier roster. It records no additional visit and does not supply a new clinician observation."
+              }
+            ]
+          },
+          {
+            "encounter_id": "HG-E111",
+            "service_date": "2026-01-19",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": null,
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D105"
+                ],
+                "present": [
+                  {
+                    "start": "11:15",
+                    "end": "11:45",
+                    "doc_id": "BH-D105",
+                    "line": 6,
+                    "evidence": "Patient contact: 11:15\u201311:45 | Completed: 30 minutes"
+                  }
+                ],
+                "therapy_minutes": 30,
+                "present_minutes": 30,
+                "calculation": "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D105",
+                "role": "individual_note",
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          },
+          {
+            "encounter_id": "HG-E112",
+            "service_date": "2026-01-21",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": null,
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D106"
+                ],
+                "present": [
+                  {
+                    "start": "13:00",
+                    "end": "13:20",
+                    "doc_id": "BH-D106",
+                    "line": 7,
+                    "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                  },
+                  {
+                    "start": "13:30",
+                    "end": "13:55",
+                    "doc_id": "BH-D106",
+                    "line": 7,
+                    "evidence": "Patient contact occurred 13:00\u201313:20 and 13:30\u201313:55. Connection was lost from 13:20\u201313:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112."
+                  }
+                ],
+                "therapy_minutes": 45,
+                "present_minutes": 45,
+                "calculation": "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D106",
+                "role": "individual_note",
+                "contributions": [
+                  "patient-present interval",
+                  "nontherapeutic interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          },
+          {
+            "encounter_id": "HG-E113",
+            "service_date": "2026-01-22",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended_partial",
+            "partial": true,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 10:30\u201311:30 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 60,
+              "high": 60,
+              "status": "determined",
+              "calculations": [
+                "present 10:30\u201311:30 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D108"
+                ],
+                "present": [
+                  {
+                    "start": "10:30",
+                    "end": "11:30",
+                    "doc_id": "BH-D108",
+                    "line": 9,
+                    "evidence": "January 22 | HG-E113 | Skills group | 10:00\u201311:30 | 10:30 | 11:30 | Attended, late arrival"
+                  }
+                ],
+                "therapy_minutes": 45,
+                "present_minutes": 60,
+                "calculation": "present 10:30\u201311:30 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D107",
+                "role": "group_note",
+                "contributions": [
+                  "nontherapeutic interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D108",
+                "role": "attendance_register",
+                "contributions": [
+                  "patient-present interval",
+                  "disposition",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          }
+        ],
+        "day_count": 3,
+        "day_goal_met": true,
+        "contact_status": "met",
+        "present_status": "met",
+        "conclusion": "met",
+        "reason": null,
+        "needed_days": 3,
+        "needed_minutes": 150
+      },
+      {
+        "monday": "2026-01-26",
+        "sunday": "2026-02-01",
+        "inside_window_end": "2026-01-30",
+        "therapy_days": [
+          "2026-01-26",
+          "2026-01-29",
+          "2026-01-30"
+        ],
+        "contact_minutes": {
+          "low": 145,
+          "high": 155,
+          "status": "unresolved"
+        },
+        "present_minutes": {
+          "low": 160,
+          "high": 170,
+          "status": "unresolved"
+        },
+        "encounters": [
+          {
+            "encounter_id": "HG-E115",
+            "service_date": "2026-01-26",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": null,
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 40,
+              "high": 50,
+              "status": "unresolved",
+              "calculations": [
+                "present 09:00\u201309:50 = 50 min; therapy minutes = 50",
+                "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 40,
+              "high": 50,
+              "status": "unresolved",
+              "calculations": [
+                "present 09:00\u201309:50 = 50 min; therapy minutes = 50",
+                "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D110"
+                ],
+                "present": [
+                  {
+                    "start": "09:00",
+                    "end": "09:50",
+                    "doc_id": "BH-D110",
+                    "line": 7,
+                    "evidence": "Actual patient psychotherapy contact: 09:00\u201309:50, 50 minutes."
+                  }
+                ],
+                "therapy_minutes": 50,
+                "present_minutes": 50,
+                "calculation": "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+              },
+              {
+                "doc_ids": [
+                  "BH-D111"
+                ],
+                "present": [
+                  {
+                    "start": "09:10",
+                    "end": "09:50",
+                    "doc_id": "BH-D111",
+                    "line": 7,
+                    "evidence": "Actual patient psychotherapy contact: 09:10\u201309:50, 40 minutes."
+                  }
+                ],
+                "therapy_minutes": 40,
+                "present_minutes": 40,
+                "calculation": "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+              }
+            ],
+            "warnings": [
+              "Eligible final notes disagree on the patient-contact interval. Neither document is a correction of the other, so both durations are retained."
+            ],
+            "sources": [
+              {
+                "doc_id": "BH-D110",
+                "role": "individual_note",
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D111",
+                "role": "individual_note",
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          },
+          {
+            "encounter_id": "HG-E118",
+            "service_date": "2026-01-29",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 75,
+              "high": 75,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 90,
+              "high": 90,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D108"
+                ],
+                "present": [
+                  {
+                    "start": "10:00",
+                    "end": "11:30",
+                    "doc_id": "BH-D108",
+                    "line": 12,
+                    "evidence": "January 29 | HG-E118 | Skills group | 10:00\u201311:30 | 10:00 | 11:30 | Attended"
+                  }
+                ],
+                "therapy_minutes": 75,
+                "present_minutes": 90,
+                "calculation": "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D107",
+                "role": "group_note",
+                "contributions": [
+                  "nontherapeutic interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              },
+              {
+                "doc_id": "BH-D108",
+                "role": "attendance_register",
+                "contributions": [
+                  "patient-present interval",
+                  "disposition",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          },
+          {
+            "encounter_id": "HG-E119",
+            "service_date": "2026-01-30",
+            "service_type": "family_psychotherapy",
+            "service_label": "family psychotherapy",
+            "disposition": null,
+            "partial": true,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 13:15\u201313:45 = 30 min; therapy minutes = 30"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 13:15\u201313:45 = 30 min; therapy minutes = 30"
+              ]
+            },
+            "scenarios": [
+              {
+                "doc_ids": [
+                  "BH-D113"
+                ],
+                "present": [
+                  {
+                    "start": "13:15",
+                    "end": "13:45",
+                    "doc_id": "BH-D113",
+                    "line": 7,
+                    "evidence": "Partner only: 13:00\u201313:15. Rowan present with partner: 13:15\u201313:45, 30 minutes."
+                  }
+                ],
+                "therapy_minutes": 30,
+                "present_minutes": 30,
+                "calculation": "present 13:15\u201313:45 = 30 min; therapy minutes = 30"
+              }
+            ],
+            "warnings": [],
+            "sources": [
+              {
+                "doc_id": "BH-D113",
+                "role": "family_note",
+                "contributions": [
+                  "patient-present interval",
+                  "service type"
+                ],
+                "not_used_because": null
+              }
+            ]
+          }
+        ],
+        "day_count": 3,
+        "day_goal_met": true,
+        "contact_status": "cannot_be_determined",
+        "present_status": "met",
+        "conclusion": "cannot_be_determined",
+        "reason": "The two readings of 'therapy minutes' disagree. Excluding documented nontherapeutic intervals: cannot_be_determined. Counting all patient-present clock time, including breaks the patient sat through: met.",
+        "needed_days": 3,
+        "needed_minutes": 150
+      }
+    ]
+  }
+}

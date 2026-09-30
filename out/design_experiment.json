@@ -1,0 +1,153 @@
+{
+  "decision": "Use explicit authority. A correction replaces only the field it corrects. A retransmission is not new evidence. Two final notes that disagree stay a range.",
+  "comparison_policy": "latest chart document that states a presence interval, including retransmissions and excluding drafts",
+  "encounters": {
+    "HG-E110": {
+      "authority": {
+        "therapy_minutes": {
+          "low": 60,
+          "high": 60,
+          "status": "determined",
+          "calculations": [
+            "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+          ]
+        },
+        "decision": "Used authority 100 from BH-D103. Lower-authority presence claims not used for the clock time: BH-D102."
+      },
+      "latest_document": {
+        "therapy_minutes": {
+          "low": 75,
+          "high": 75,
+          "status": "determined",
+          "calculations": [
+            "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+          ]
+        },
+        "decision": "Latest chart document BH-D104 (2026-01-26T16:22) was used only as a comparison policy."
+      }
+    },
+    "HG-E115": {
+      "authority": {
+        "therapy_minutes": {
+          "low": 40,
+          "high": 50,
+          "status": "unresolved",
+          "calculations": [
+            "present 09:00\u201309:50 = 50 min; therapy minutes = 50",
+            "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+          ]
+        },
+        "decision": "Eligible documents at the same authority disagree on the contact interval (BH-D110, BH-D111). No document corrects the other, so the duration is unresolved."
+      },
+      "latest_document": {
+        "therapy_minutes": {
+          "low": 40,
+          "high": 40,
+          "status": "determined",
+          "calculations": [
+            "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+          ]
+        },
+        "decision": "Latest chart document BH-D111 (2026-01-26T12:03) was used only as a comparison policy."
+      }
+    }
+  },
+  "week_conclusions": {
+    "authority": {
+      "2026-01-05": {
+        "conclusion": "cannot_be_determined",
+        "contact_status": "not_met",
+        "present_status": "met",
+        "contact_minutes": {
+          "low": 140,
+          "high": 140,
+          "status": "determined"
+        }
+      },
+      "2026-01-12": {
+        "conclusion": "not_met",
+        "contact_status": "not_met",
+        "present_status": "not_met",
+        "contact_minutes": {
+          "low": 120,
+          "high": 120,
+          "status": "determined"
+        }
+      },
+      "2026-01-19": {
+        "conclusion": "met",
+        "contact_status": "met",
+        "present_status": "met",
+        "contact_minutes": {
+          "low": 180,
+          "high": 180,
+          "status": "determined"
+        }
+      },
+      "2026-01-26": {
+        "conclusion": "cannot_be_determined",
+        "contact_status": "cannot_be_determined",
+        "present_status": "met",
+        "contact_minutes": {
+          "low": 145,
+          "high": 155,
+          "status": "unresolved"
+        }
+      }
+    },
+    "latest_document": {
+      "2026-01-05": {
+        "conclusion": "cannot_be_determined",
+        "contact_status": "not_met",
+        "present_status": "met",
+        "contact_minutes": {
+          "low": 140,
+          "high": 140,
+          "status": "determined"
+        }
+      },
+      "2026-01-12": {
+        "conclusion": "not_met",
+        "contact_status": "not_met",
+        "present_status": "not_met",
+        "contact_minutes": {
+          "low": 120,
+          "high": 120,
+          "status": "determined"
+        }
+      },
+      "2026-01-19": {
+        "conclusion": "met",
+        "contact_status": "met",
+        "present_status": "met",
+        "contact_minutes": {
+          "low": 195,
+          "high": 195,
+          "status": "determined"
+        }
+      },
+      "2026-01-26": {
+        "conclusion": "cannot_be_determined",
+        "contact_status": "not_met",
+        "present_status": "met",
+        "contact_minutes": {
+          "low": 145,
+          "high": 145,
+          "status": "determined"
+        }
+      }
+    }
+  },
+  "episode_contact_minutes": {
+    "authority": {
+      "low": 585,
+      "high": 595,
+      "status": "unresolved"
+    },
+    "latest_document": {
+      "low": 600,
+      "high": 600,
+      "status": "determined"
+    }
+  }
+}

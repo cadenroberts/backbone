@@ -1,0 +1,664 @@
+{
+  "id": "DEV-01",
+  "question": "For January 5\u201330, 2026, how many therapy sessions did Rowan attend, by service type and in total, and on how many distinct days? Provide a reviewable abstraction with source support and explain records that could lead to duplicate or ineligible counts.",
+  "seconds": 20.259299917001044,
+  "narration": {
+    "used": true,
+    "called": true,
+    "provider": "ollama",
+    "model": "llama3.1:8b",
+    "settings": {
+      "temperature": 0,
+      "top_p": 0.9,
+      "num_ctx": 8192,
+      "num_predict": 900
+    },
+    "prose": "**Therapy Sessions by Service Type and Total**\n\n| Service Type | Number of Sessions |\n| --- | --- |\n| Individual Psychotherapy | 5 |\n| Group Psychotherapy | 5 |\n| Family Psychotherapy | 2 |\n| Total | 12 |\n\n**Distinct Days Attended**\n\n12 therapy sessions on 11 distinct days (January 5, 2026 through January 30, 2026).\n\n**Source Support**\n\nThe calculation is based on the provided encounter data for January 5-30, 2026.\n\n**Records that could lead to duplicate or ineligible counts**\n\n- HG-E110 (January 19, 2026) is counted once, but BH-D104 is a retransmission of an earlier roster with no additional visit or clinician observation.\n- HG-E115 (January 26, 2026) is counted once, but the eligible final notes disagree on the patient-contact interval.\n- HG-E116 (January 27, 2026) is not counted, but BH-D112 is an unsigned template draft and billing charge with no evidence of a therapy contact.\n- HG-E120 (January 30, 2026) is not counted, as it is a medication management encounter outside individual, group, and family psychotherapy.",
+    "fallback": null,
+    "tokens": 1630,
+    "cost_usd": 0
+  },
+  "data": {
+    "patient": {
+      "name": "Rowan Mercer",
+      "mrn": "HG-M042",
+      "dob": "1991-04-12"
+    },
+    "start": "2026-01-05",
+    "end": "2026-01-30",
+    "by_type": {
+      "individual_psychotherapy": {
+        "count": 5,
+        "encounters": [
+          {
+            "encounter_id": "HG-E101",
+            "service_date": "2026-01-05",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": "completed",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 50,
+              "high": 50,
+              "status": "determined",
+              "calculations": [
+                "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 50,
+              "high": 50,
+              "status": "determined",
+              "calculations": [
+                "present 09:00\u201309:50 = 50 min; therapy minutes = 50"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E107",
+            "service_date": "2026-01-14",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": "completed",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 11:00\u201311:45 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 11:00\u201311:45 = 45 min; therapy minutes = 45"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E111",
+            "service_date": "2026-01-19",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": null,
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 11:15\u201311:45 = 30 min; therapy minutes = 30"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E112",
+            "service_date": "2026-01-21",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": null,
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 13:00\u201313:20 + 13:30\u201313:55 = 45 min; therapy minutes = 45"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E115",
+            "service_date": "2026-01-26",
+            "service_type": "individual_psychotherapy",
+            "service_label": "individual psychotherapy",
+            "disposition": null,
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 40,
+              "high": 50,
+              "status": "unresolved",
+              "calculations": [
+                "present 09:00\u201309:50 = 50 min; therapy minutes = 50",
+                "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 40,
+              "high": 50,
+              "status": "unresolved",
+              "calculations": [
+                "present 09:00\u201309:50 = 50 min; therapy minutes = 50",
+                "present 09:10\u201309:50 = 40 min; therapy minutes = 40"
+              ]
+            }
+          }
+        ]
+      },
+      "group_psychotherapy": {
+        "count": 5,
+        "encounters": [
+          {
+            "encounter_id": "HG-E102",
+            "service_date": "2026-01-06",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended_partial",
+            "partial": true,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 10:15\u201311:15 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 60,
+              "high": 60,
+              "status": "determined",
+              "calculations": [
+                "present 10:15\u201311:15 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E105",
+            "service_date": "2026-01-12",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 75,
+              "high": 75,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:40\u201310:55 = 15 min; therapy minutes = 90 - 15 = 75"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 90,
+              "high": 90,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:40\u201310:55 = 15 min; therapy minutes = 90 - 15 = 75"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E110",
+            "service_date": "2026-01-19",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended",
+            "partial": true,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 60,
+              "high": 60,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 75,
+              "high": 75,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:15 = 75 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 75 - 15 = 60"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E113",
+            "service_date": "2026-01-22",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended_partial",
+            "partial": true,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 10:30\u201311:30 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 60,
+              "high": 60,
+              "status": "determined",
+              "calculations": [
+                "present 10:30\u201311:30 = 60 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 60 - 15 = 45"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E118",
+            "service_date": "2026-01-29",
+            "service_type": "group_psychotherapy",
+            "service_label": "group psychotherapy",
+            "disposition": "attended",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 75,
+              "high": 75,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 90,
+              "high": 90,
+              "status": "determined",
+              "calculations": [
+                "present 10:00\u201311:30 = 90 min; nontherapeutic overlap 10:45\u201311:00 = 15 min; therapy minutes = 90 - 15 = 75"
+              ]
+            }
+          }
+        ]
+      },
+      "family_psychotherapy": {
+        "count": 2,
+        "encounters": [
+          {
+            "encounter_id": "HG-E104",
+            "service_date": "2026-01-09",
+            "service_type": "family_psychotherapy",
+            "service_label": "family psychotherapy",
+            "disposition": "completed",
+            "partial": false,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 14:00\u201314:45 = 45 min; therapy minutes = 45"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 45,
+              "high": 45,
+              "status": "determined",
+              "calculations": [
+                "present 14:00\u201314:45 = 45 min; therapy minutes = 45"
+              ]
+            }
+          },
+          {
+            "encounter_id": "HG-E119",
+            "service_date": "2026-01-30",
+            "service_type": "family_psychotherapy",
+            "service_label": "family psychotherapy",
+            "disposition": null,
+            "partial": true,
+            "delivered_therapy": true,
+            "therapy_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 13:15\u201313:45 = 30 min; therapy minutes = 30"
+              ]
+            },
+            "patient_present_minutes": {
+              "low": 30,
+              "high": 30,
+              "status": "determined",
+              "calculations": [
+                "present 13:15\u201313:45 = 30 min; therapy minutes = 30"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "other_delivered": [],
+    "total_sessions": 12,
+    "therapy_days": [
+      "2026-01-05",
+      "2026-01-06",
+      "2026-01-09",
+      "2026-01-12",
+      "2026-01-14",
+      "2026-01-19",
+      "2026-01-21",
+      "2026-01-22",
+      "2026-01-26",
+      "2026-01-29",
+      "2026-01-30"
+    ],
+    "therapy_day_count": 11,
+    "not_counted": [
+      {
+        "encounter_id": "HG-E103",
+        "service_date": "2026-01-08",
+        "service_type": "individual_psychotherapy",
+        "service_label": "individual psychotherapy",
+        "disposition": "no_show",
+        "partial": false,
+        "delivered_therapy": false,
+        "therapy_minutes": null,
+        "patient_present_minutes": null,
+        "exclusion_reason": "The patient did not attend."
+      },
+      {
+        "encounter_id": "HG-E106",
+        "service_date": "2026-01-13",
+        "service_type": "medication_management",
+        "service_label": "medication management",
+        "disposition": "completed",
+        "partial": false,
+        "delivered_therapy": false,
+        "therapy_minutes": {
+          "low": 25,
+          "high": 25,
+          "status": "determined",
+          "calculations": [
+            "present 09:00\u201309:25 = 25 min; therapy minutes = 25"
+          ]
+        },
+        "patient_present_minutes": {
+          "low": 25,
+          "high": 25,
+          "status": "determined",
+          "calculations": [
+            "present 09:00\u201309:25 = 25 min; therapy minutes = 25"
+          ]
+        },
+        "exclusion_reason": "medication management is outside individual, group, and family psychotherapy."
+      },
+      {
+        "encounter_id": "HG-E108",
+        "service_date": "2026-01-15",
+        "service_type": "group_psychotherapy",
+        "service_label": "group psychotherapy",
+        "disposition": "cancelled_clinic",
+        "partial": false,
+        "delivered_therapy": false,
+        "therapy_minutes": null,
+        "patient_present_minutes": null,
+        "exclusion_reason": "The clinic cancelled the visit before it occurred."
+      },
+      {
+        "encounter_id": "HG-E109",
+        "service_date": "2026-01-16",
+        "service_type": "collateral",
+        "service_label": "collateral contact",
+        "disposition": "completed",
+        "partial": false,
+        "delivered_therapy": false,
+        "therapy_minutes": null,
+        "patient_present_minutes": null,
+        "exclusion_reason": "collateral contact is outside individual, group, and family psychotherapy."
+      },
+      {
+        "encounter_id": "HG-E114",
+        "service_date": "2026-01-23",
+        "service_type": "care_coordination",
+        "service_label": "care coordination",
+        "disposition": null,
+        "partial": false,
+        "delivered_therapy": false,
+        "therapy_minutes": null,
+        "patient_present_minutes": null,
+        "exclusion_reason": "care coordination is outside individual, group, and family psychotherapy."
+      },
+      {
+        "encounter_id": "HG-E116",
+        "service_date": "2026-01-27",
+        "service_type": "group_psychotherapy",
+        "service_label": "group psychotherapy",
+        "disposition": "no_show",
+        "partial": false,
+        "delivered_therapy": false,
+        "therapy_minutes": null,
+        "patient_present_minutes": null,
+        "exclusion_reason": "The patient did not attend."
+      },
+      {
+        "encounter_id": "HG-E117",
+        "service_date": "2026-01-28",
+        "service_type": "individual_psychotherapy",
+        "service_label": "individual psychotherapy",
+        "disposition": "cancelled_patient",
+        "partial": false,
+        "delivered_therapy": false,
+        "therapy_minutes": null,
+        "patient_present_minutes": null,
+        "exclusion_reason": "The patient cancelled before the visit."
+      },
+      {
+        "encounter_id": "HG-E120",
+        "service_date": "2026-01-30",
+        "service_type": "medication_management",
+        "service_label": "medication management",
+        "disposition": null,
+        "partial": false,
+        "delivered_therapy": false,
+        "therapy_minutes": {
+          "low": 20,
+          "high": 20,
+          "status": "determined",
+          "calculations": [
+            "present 15:00\u201315:20 = 20 min; therapy minutes = 20"
+          ]
+        },
+        "patient_present_minutes": {
+          "low": 20,
+          "high": 20,
+          "status": "determined",
+          "calculations": [
+            "present 15:00\u201315:20 = 20 min; therapy minutes = 20"
+          ]
+        },
+        "exclusion_reason": "medication management is outside individual, group, and family psychotherapy."
+      }
+    ],
+    "duplicate_risks": [
+      {
+        "encounter_id": "HG-E101",
+        "service_date": "2026-01-05",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D006",
+          "BH-D002"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E102",
+        "service_date": "2026-01-06",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D006",
+          "BH-D005",
+          "BH-D004"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E103",
+        "service_date": "2026-01-08",
+        "delivered_therapy": false,
+        "documents": [
+          "BH-D006",
+          "BH-D015"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E104",
+        "service_date": "2026-01-09",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D006",
+          "BH-D008",
+          "BH-D007"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E105",
+        "service_date": "2026-01-12",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D006",
+          "BH-D005",
+          "BH-D009"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E106",
+        "service_date": "2026-01-13",
+        "delivered_therapy": false,
+        "documents": [
+          "BH-D006",
+          "BH-D010"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E107",
+        "service_date": "2026-01-14",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D006",
+          "BH-D011"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E108",
+        "service_date": "2026-01-15",
+        "delivered_therapy": false,
+        "documents": [
+          "BH-D006",
+          "BH-D016"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E109",
+        "service_date": "2026-01-16",
+        "delivered_therapy": false,
+        "documents": [
+          "BH-D006",
+          "BH-D012"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E110",
+        "service_date": "2026-01-19",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D101",
+          "BH-D102",
+          "BH-D103",
+          "BH-D104"
+        ],
+        "warnings": [],
+        "held_out": [
+          {
+            "doc_id": "BH-D104",
+            "reason": "Retransmission of an earlier roster. It records no additional visit and does not supply a new clinician observation."
+          }
+        ]
+      },
+      {
+        "encounter_id": "HG-E113",
+        "service_date": "2026-01-22",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D107",
+          "BH-D108"
+        ],
+        "warnings": [],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E115",
+        "service_date": "2026-01-26",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D110",
+          "BH-D111"
+        ],
+        "warnings": [
+          "Eligible final notes disagree on the patient-contact interval. Neither document is a correction of the other, so both durations are retained."
+        ],
+        "held_out": []
+      },
+      {
+        "encounter_id": "HG-E116",
+        "service_date": "2026-01-27",
+        "delivered_therapy": false,
+        "documents": [
+          "BH-D108",
+          "BH-D112"
+        ],
+        "warnings": [],
+        "held_out": [
+          {
+            "doc_id": "BH-D112",
+            "reason": "Unsigned template draft and billing charge. Neither establishes that a therapy contact occurred."
+          }
+        ]
+      },
+      {
+        "encounter_id": "HG-E118",
+        "service_date": "2026-01-29",
+        "delivered_therapy": true,
+        "documents": [
+          "BH-D107",
+          "BH-D108"
+        ],
+        "warnings": [],
+        "held_out": []
+      }
+    ]
+  }
+}
