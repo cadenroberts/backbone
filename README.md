@@ -41,18 +41,18 @@ Each file becomes claims: encounter, clock intervals, disposition, symptom score
 Therapy minutes are patient-present time in individual, group, or family psychotherapy, minus intervals the note calls nontherapeutic (group breaks, a dropped video connection, time before the patient joined a family visit). A second count keeps the break, because the plan’s phrase is “patient-present.” Week goals are met only when both readings meet them.
 
 ```mermaid
-flowchart TD
-  docs["Source documents<br/>id, role, chart time, content hash"]
-  claims["Per-document claims<br/>encounters, measures, plan text"]
+graph TD
+  docs["Source documents<br>id, role, chart time, content hash"]
+  claims["Per-document claims<br>encounters, measures, plan text"]
   docs --> claims
 
-  subgraph abstraction ["Saved abstraction"]
-    patient["Patient<br/>name, MRN, date of birth"]
-    plan["Treatment plan<br/>therapy-day goal, minute goal,<br/>included and excluded service types"]
-    encounter["Encounter<br/>one row per contact id"]
-    measure["Symptom measure<br/>one row per administration"]
-    scenario["Minute scenario<br/>present intervals minus nontherapeutic intervals"]
-    citation["Source citation<br/>document, line, used or held out"]
+  subgraph abstraction [Saved abstraction]
+    patient["Patient<br>name, MRN, date of birth"]
+    plan["Treatment plan<br>therapy-day goal, minute goal,<br>included and excluded service types"]
+    encounter["Encounter<br>one row per contact id"]
+    measure["Symptom measure<br>one row per administration"]
+    scenario["Minute scenario<br>present intervals minus nontherapeutic intervals"]
+    citation["Source citation<br>document, line, used or held out"]
     patient --> plan
     patient --> encounter
     patient --> measure
@@ -62,11 +62,11 @@ flowchart TD
 
   claims --> patient
   citation --> docs
-  scenario --> answers["Calculations in code<br/>sessions, minutes, weeks, named days, symptoms"]
+  scenario --> answers["Calculations in code<br>sessions, minutes, weeks, named days, symptoms"]
   plan --> answers
   measure --> answers
-  answers --> narrator["Answer prose, local Ollama<br/>llama3.1:8b, temperature 0<br/>phrases the calculation and does not recompute it"]
-  answers --> kept["Calculation tables and citations<br/>kept verbatim from code"]
+  answers --> narrator["Answer prose, local Ollama<br>llama3.1 8b, temperature 0<br>phrases the calculation and does not recompute it"]
+  answers --> kept["Calculation tables and citations<br>kept verbatim from code"]
   narrator --> final["Review answer"]
   kept --> final
 ```
